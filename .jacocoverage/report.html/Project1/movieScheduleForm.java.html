@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>movieScheduleForm.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;leCinema&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">Project1</a> &gt; <span class="el_source">movieScheduleForm.java</span></div><h1>movieScheduleForm.java</h1><pre class="source lang-java linenums">package Project1;
+
+import java.util.List;
+
+public class movieScheduleForm extends javax.swing.JFrame implements gbBTN
+{
+
+    public movieScheduleForm() 
+<span class="nc" id="L9">    {</span>
+<span class="nc" id="L10">        initComponents();</span>
+<span class="nc" id="L11">        setLocationRelativeTo(this);</span>
+<span class="nc" id="L12">    }</span>
+
+    @SuppressWarnings(&quot;unchecked&quot;)
+    // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+<span class="nc" id="L18">        panel_mm = new javax.swing.JPanel();</span>
+<span class="nc" id="L19">        lbl_title = new javax.swing.JLabel();</span>
+<span class="nc" id="L20">        btn_goback = new javax.swing.JButton();</span>
+<span class="nc" id="L21">        jPanel1 = new javax.swing.JPanel();</span>
+<span class="nc" id="L22">        lbl_theater1 = new javax.swing.JLabel();</span>
+<span class="nc" id="L23">        lbl_movie3 = new javax.swing.JLabel();</span>
+<span class="nc" id="L24">        lbl_price1 = new javax.swing.JLabel();</span>
+<span class="nc" id="L25">        lbl_time1 = new javax.swing.JLabel();</span>
+<span class="nc" id="L26">        lbl_time2 = new javax.swing.JLabel();</span>
+<span class="nc" id="L27">        lbl_time3 = new javax.swing.JLabel();</span>
+<span class="nc" id="L28">        lbl_image1 = new javax.swing.JLabel();</span>
+<span class="nc" id="L29">        jPanel2 = new javax.swing.JPanel();</span>
+<span class="nc" id="L30">        lbl_theater2 = new javax.swing.JLabel();</span>
+<span class="nc" id="L31">        lbl_movie4 = new javax.swing.JLabel();</span>
+<span class="nc" id="L32">        lbl_price2 = new javax.swing.JLabel();</span>
+<span class="nc" id="L33">        lbl_time4 = new javax.swing.JLabel();</span>
+<span class="nc" id="L34">        lbl_time5 = new javax.swing.JLabel();</span>
+<span class="nc" id="L35">        lbl_time6 = new javax.swing.JLabel();</span>
+<span class="nc" id="L36">        lbl_image2 = new javax.swing.JLabel();</span>
+
+<span class="nc" id="L38">        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);</span>
+
+<span class="nc" id="L40">        panel_mm.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L41">        panel_mm.setBorder(javax.swing.BorderFactory.createMatteBorder(8, 8, 8, 8, new java.awt.Color(0, 0, 0)));</span>
+
+<span class="nc" id="L43">        lbl_title.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 36)); // NOI18N</span>
+<span class="nc" id="L44">        lbl_title.setText(&quot;Movie Schedule&quot;);</span>
+
+<span class="nc" id="L46">        btn_goback.setBackground(new java.awt.Color(0, 0, 0));</span>
+<span class="nc" id="L47">        btn_goback.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 14)); // NOI18N</span>
+<span class="nc" id="L48">        btn_goback.setForeground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L49">        btn_goback.setText(&quot;Go Back&quot;);</span>
+<span class="nc" id="L50">        btn_goback.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L52">                btn_gobackActionPerformed(evt);</span>
+<span class="nc" id="L53">            }</span>
+        });
+
+<span class="nc" id="L56">        jPanel1.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L57">        jPanel1.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(0, 0, 0)));</span>
+
+<span class="nc" id="L59">        lbl_theater1.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 18)); // NOI18N</span>
+<span class="nc" id="L60">        lbl_theater1.setText(&quot;Theater 1&quot;);</span>
+
+<span class="nc" id="L62">        lbl_movie3.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 18)); // NOI18N</span>
+<span class="nc" id="L63">        lbl_movie3.setText(&quot;Harry Potter and the Half Blood Prince&quot;);</span>
+
+<span class="nc" id="L65">        lbl_price1.setFont(new java.awt.Font(&quot;Tahoma&quot;, 2, 14)); // NOI18N</span>
+<span class="nc" id="L66">        lbl_price1.setText(&quot;IDR 55.000,00&quot;);</span>
+
+<span class="nc" id="L68">        lbl_time1.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 18)); // NOI18N</span>
+<span class="nc" id="L69">        lbl_time1.setText(&quot;12.30&quot;);</span>
+
+<span class="nc" id="L71">        lbl_time2.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 18)); // NOI18N</span>
+<span class="nc" id="L72">        lbl_time2.setText(&quot;15.30&quot;);</span>
+
+<span class="nc" id="L74">        lbl_time3.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 18)); // NOI18N</span>
+<span class="nc" id="L75">        lbl_time3.setText(&quot;19.00&quot;);</span>
+
+<span class="nc" id="L77">        lbl_image1.setIcon(new javax.swing.ImageIcon(getClass().getResource(&quot;/images/MHZOrgX8xGn8VXV8k0zVwiQxRdt.jpg&quot;))); // NOI18N</span>
+<span class="nc" id="L78">        lbl_image1.setMaximumSize(new java.awt.Dimension(220, 326));</span>
+<span class="nc" id="L79">        lbl_image1.setPreferredSize(new java.awt.Dimension(220, 326));</span>
+
+<span class="nc" id="L81">        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);</span>
+<span class="nc" id="L82">        jPanel1.setLayout(jPanel1Layout);</span>
+<span class="nc" id="L83">        jPanel1Layout.setHorizontalGroup(</span>
+<span class="nc" id="L84">            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L85">            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L86">                .addContainerGap()</span>
+<span class="nc" id="L87">                .addComponent(lbl_image1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L88">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)</span>
+<span class="nc" id="L89">                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L90">                    .addComponent(lbl_price1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L91">                    .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L92">                        .addComponent(lbl_time1)</span>
+<span class="nc" id="L93">                        .addGap(18, 18, 18)</span>
+<span class="nc" id="L94">                        .addComponent(lbl_time2)</span>
+<span class="nc" id="L95">                        .addGap(18, 18, 18)</span>
+<span class="nc" id="L96">                        .addComponent(lbl_time3))</span>
+<span class="nc" id="L97">                    .addComponent(lbl_movie3)</span>
+<span class="nc" id="L98">                    .addComponent(lbl_theater1))</span>
+<span class="nc" id="L99">                .addGap(20, 20, 20))</span>
+        );
+<span class="nc" id="L101">        jPanel1Layout.setVerticalGroup(</span>
+<span class="nc" id="L102">            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L103">            .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L104">                .addContainerGap()</span>
+<span class="nc" id="L105">                .addComponent(lbl_image1, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L106">                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))</span>
+<span class="nc" id="L107">            .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L108">                .addGap(27, 27, 27)</span>
+<span class="nc" id="L109">                .addComponent(lbl_theater1)</span>
+<span class="nc" id="L110">                .addGap(38, 38, 38)</span>
+<span class="nc" id="L111">                .addComponent(lbl_movie3)</span>
+<span class="nc" id="L112">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
+<span class="nc" id="L113">                .addComponent(lbl_price1)</span>
+<span class="nc" id="L114">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="nc" id="L115">                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L116">                    .addComponent(lbl_time1)</span>
+<span class="nc" id="L117">                    .addComponent(lbl_time2)</span>
+<span class="nc" id="L118">                    .addComponent(lbl_time3))</span>
+<span class="nc" id="L119">                .addGap(42, 42, 42))</span>
+        );
+
+<span class="nc" id="L122">        jPanel2.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L123">        jPanel2.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(0, 0, 0)));</span>
+<span class="nc" id="L124">        jPanel2.setPreferredSize(new java.awt.Dimension(508, 243));</span>
+
+<span class="nc" id="L126">        lbl_theater2.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 18)); // NOI18N</span>
+<span class="nc" id="L127">        lbl_theater2.setText(&quot;Theater 2&quot;);</span>
+
+<span class="nc" id="L129">        lbl_movie4.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 18)); // NOI18N</span>
+<span class="nc" id="L130">        lbl_movie4.setText(&quot;Avengers : End Game&quot;);</span>
+
+<span class="nc" id="L132">        lbl_price2.setFont(new java.awt.Font(&quot;Tahoma&quot;, 2, 14)); // NOI18N</span>
+<span class="nc" id="L133">        lbl_price2.setText(&quot;IDR 55.000,00&quot;);</span>
+
+<span class="nc" id="L135">        lbl_time4.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 18)); // NOI18N</span>
+<span class="nc" id="L136">        lbl_time4.setText(&quot;12.30&quot;);</span>
+
+<span class="nc" id="L138">        lbl_time5.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 18)); // NOI18N</span>
+<span class="nc" id="L139">        lbl_time5.setText(&quot;15.30&quot;);</span>
+
+<span class="nc" id="L141">        lbl_time6.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 18)); // NOI18N</span>
+<span class="nc" id="L142">        lbl_time6.setText(&quot;19.00&quot;);</span>
+
+<span class="nc" id="L144">        lbl_image2.setIcon(new javax.swing.ImageIcon(getClass().getResource(&quot;/images/Avengers_Endgame_poster.jpg&quot;))); // NOI18N</span>
+
+<span class="nc" id="L146">        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);</span>
+<span class="nc" id="L147">        jPanel2.setLayout(jPanel2Layout);</span>
+<span class="nc" id="L148">        jPanel2Layout.setHorizontalGroup(</span>
+<span class="nc" id="L149">            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L150">            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()</span>
+<span class="nc" id="L151">                .addContainerGap()</span>
+<span class="nc" id="L152">                .addComponent(lbl_image2)</span>
+<span class="nc" id="L153">                .addGap(29, 29, 29)</span>
+<span class="nc" id="L154">                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L155">                    .addComponent(lbl_theater2)</span>
+<span class="nc" id="L156">                    .addComponent(lbl_price2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L157">                    .addGroup(jPanel2Layout.createSequentialGroup()</span>
+<span class="nc" id="L158">                        .addComponent(lbl_time4)</span>
+<span class="nc" id="L159">                        .addGap(18, 18, 18)</span>
+<span class="nc" id="L160">                        .addComponent(lbl_time5)</span>
+<span class="nc" id="L161">                        .addGap(18, 18, 18)</span>
+<span class="nc" id="L162">                        .addComponent(lbl_time6))</span>
+<span class="nc" id="L163">                    .addComponent(lbl_movie4))</span>
+<span class="nc" id="L164">                .addContainerGap(148, Short.MAX_VALUE))</span>
+        );
+<span class="nc" id="L166">        jPanel2Layout.setVerticalGroup(</span>
+<span class="nc" id="L167">            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L168">            .addGroup(jPanel2Layout.createSequentialGroup()</span>
+<span class="nc" id="L169">                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L170">                    .addGroup(jPanel2Layout.createSequentialGroup()</span>
+<span class="nc" id="L171">                        .addContainerGap()</span>
+<span class="nc" id="L172">                        .addComponent(lbl_image2))</span>
+<span class="nc" id="L173">                    .addGroup(jPanel2Layout.createSequentialGroup()</span>
+<span class="nc" id="L174">                        .addGap(38, 38, 38)</span>
+<span class="nc" id="L175">                        .addComponent(lbl_theater2)</span>
+<span class="nc" id="L176">                        .addGap(33, 33, 33)</span>
+<span class="nc" id="L177">                        .addComponent(lbl_movie4)</span>
+<span class="nc" id="L178">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
+<span class="nc" id="L179">                        .addComponent(lbl_price2)</span>
+<span class="nc" id="L180">                        .addGap(41, 41, 41)</span>
+<span class="nc" id="L181">                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L182">                            .addComponent(lbl_time4)</span>
+<span class="nc" id="L183">                            .addComponent(lbl_time5)</span>
+<span class="nc" id="L184">                            .addComponent(lbl_time6))))</span>
+<span class="nc" id="L185">                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))</span>
+        );
+
+<span class="nc" id="L188">        javax.swing.GroupLayout panel_mmLayout = new javax.swing.GroupLayout(panel_mm);</span>
+<span class="nc" id="L189">        panel_mm.setLayout(panel_mmLayout);</span>
+<span class="nc" id="L190">        panel_mmLayout.setHorizontalGroup(</span>
+<span class="nc" id="L191">            panel_mmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L192">            .addGroup(panel_mmLayout.createSequentialGroup()</span>
+<span class="nc" id="L193">                .addGap(153, 153, 153)</span>
+<span class="nc" id="L194">                .addComponent(lbl_title)</span>
+<span class="nc" id="L195">                .addGap(0, 0, Short.MAX_VALUE))</span>
+<span class="nc" id="L196">            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_mmLayout.createSequentialGroup()</span>
+<span class="nc" id="L197">                .addContainerGap(32, Short.MAX_VALUE)</span>
+<span class="nc" id="L198">                .addGroup(panel_mmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L199">                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_mmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L200">                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L201">                        .addGroup(panel_mmLayout.createSequentialGroup()</span>
+<span class="nc" id="L202">                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L203">                            .addGap(37, 37, 37)))</span>
+<span class="nc" id="L204">                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_mmLayout.createSequentialGroup()</span>
+<span class="nc" id="L205">                        .addComponent(btn_goback)</span>
+<span class="nc" id="L206">                        .addContainerGap())))</span>
+        );
+<span class="nc" id="L208">        panel_mmLayout.setVerticalGroup(</span>
+<span class="nc" id="L209">            panel_mmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L210">            .addGroup(panel_mmLayout.createSequentialGroup()</span>
+<span class="nc" id="L211">                .addContainerGap()</span>
+<span class="nc" id="L212">                .addComponent(lbl_title)</span>
+<span class="nc" id="L213">                .addGap(18, 18, 18)</span>
+<span class="nc" id="L214">                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L215">                .addGap(18, 18, 18)</span>
+<span class="nc" id="L216">                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)</span>
+<span class="nc" id="L217">                .addGap(27, 27, 27)</span>
+<span class="nc" id="L218">                .addComponent(btn_goback)</span>
+<span class="nc" id="L219">                .addContainerGap())</span>
+        );
+
+<span class="nc" id="L222">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());</span>
+<span class="nc" id="L223">        getContentPane().setLayout(layout);</span>
+<span class="nc" id="L224">        layout.setHorizontalGroup(</span>
+<span class="nc" id="L225">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L226">            .addComponent(panel_mm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+        );
+<span class="nc" id="L228">        layout.setVerticalGroup(</span>
+<span class="nc" id="L229">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L230">            .addGroup(layout.createSequentialGroup()</span>
+<span class="nc" id="L231">                .addComponent(panel_mm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L232">                .addGap(0, 0, Short.MAX_VALUE))</span>
+        );
+
+<span class="nc" id="L235">        pack();</span>
+<span class="nc" id="L236">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
+
+    private void btn_gobackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_gobackActionPerformed
+<span class="nc" id="L239">        goback();</span>
+<span class="nc" id="L240">    }//GEN-LAST:event_btn_gobackActionPerformed</span>
+
+    
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_goback;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lbl_image1;
+    private javax.swing.JLabel lbl_image2;
+    private javax.swing.JLabel lbl_movie3;
+    private javax.swing.JLabel lbl_movie4;
+    private javax.swing.JLabel lbl_price1;
+    private javax.swing.JLabel lbl_price2;
+    private javax.swing.JLabel lbl_theater1;
+    private javax.swing.JLabel lbl_theater2;
+    private javax.swing.JLabel lbl_time1;
+    private javax.swing.JLabel lbl_time2;
+    private javax.swing.JLabel lbl_time3;
+    private javax.swing.JLabel lbl_time4;
+    private javax.swing.JLabel lbl_time5;
+    private javax.swing.JLabel lbl_time6;
+    private javax.swing.JLabel lbl_title;
+    private javax.swing.JPanel panel_mm;
+    // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void goback() 
+    {
+<span class="nc" id="L268">        mainMenuForm obj_mame = new mainMenuForm();</span>
+<span class="nc" id="L269">        obj_mame.setVisible(true);</span>
+<span class="nc" id="L270">        this.setVisible(false);</span>
+<span class="nc" id="L271">    }</span>
+
+    @Override
+    public void goback(List ls) 
+    {
+<span class="nc" id="L276">        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>mainMenuForm.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;leCinema&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">Project1</a> &gt; <span class="el_source">mainMenuForm.java</span></div><h1>mainMenuForm.java</h1><pre class="source lang-java linenums">package Project1;
+
+import java.util.List;
+
+public class mainMenuForm extends javax.swing.JFrame implements gbBTN
+{
+    public mainMenuForm() 
+<span class="nc" id="L8">    {</span>
+<span class="nc" id="L9">        initComponents();</span>
+<span class="nc" id="L10">        setLocationRelativeTo(this);</span>
+<span class="nc" id="L11">    }</span>
+
+    @SuppressWarnings(&quot;unchecked&quot;)
+    // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+<span class="nc" id="L17">        panel_mm = new javax.swing.JPanel();</span>
+<span class="nc" id="L18">        btn_ticketing = new javax.swing.JButton();</span>
+<span class="nc" id="L19">        btn_ms = new javax.swing.JButton();</span>
+<span class="nc" id="L20">        btn_logout = new javax.swing.JButton();</span>
+
+<span class="nc" id="L22">        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);</span>
+
+<span class="nc" id="L24">        panel_mm.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L25">        panel_mm.setBorder(javax.swing.BorderFactory.createMatteBorder(8, 8, 8, 8, new java.awt.Color(0, 0, 0)));</span>
+
+<span class="nc" id="L27">        btn_ticketing.setBackground(new java.awt.Color(0, 0, 0));</span>
+<span class="nc" id="L28">        btn_ticketing.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 24)); // NOI18N</span>
+<span class="nc" id="L29">        btn_ticketing.setForeground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L30">        btn_ticketing.setText(&quot;Order Ticket&quot;);</span>
+<span class="nc" id="L31">        btn_ticketing.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L33">                btn_ticketingActionPerformed(evt);</span>
+<span class="nc" id="L34">            }</span>
+        });
+
+<span class="nc" id="L37">        btn_ms.setBackground(new java.awt.Color(0, 0, 0));</span>
+<span class="nc" id="L38">        btn_ms.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 24)); // NOI18N</span>
+<span class="nc" id="L39">        btn_ms.setForeground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L40">        btn_ms.setText(&quot;Movie Schedule&quot;);</span>
+<span class="nc" id="L41">        btn_ms.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L43">                btn_msActionPerformed(evt);</span>
+<span class="nc" id="L44">            }</span>
+        });
+
+<span class="nc" id="L47">        btn_logout.setBackground(new java.awt.Color(0, 0, 0));</span>
+<span class="nc" id="L48">        btn_logout.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L49">        btn_logout.setForeground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L50">        btn_logout.setText(&quot;Log out&quot;);</span>
+<span class="nc" id="L51">        btn_logout.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L53">                btn_logoutActionPerformed(evt);</span>
+<span class="nc" id="L54">            }</span>
+        });
+
+<span class="nc" id="L57">        javax.swing.GroupLayout panel_mmLayout = new javax.swing.GroupLayout(panel_mm);</span>
+<span class="nc" id="L58">        panel_mm.setLayout(panel_mmLayout);</span>
+<span class="nc" id="L59">        panel_mmLayout.setHorizontalGroup(</span>
+<span class="nc" id="L60">            panel_mmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L61">            .addGroup(panel_mmLayout.createSequentialGroup()</span>
+<span class="nc" id="L62">                .addContainerGap()</span>
+<span class="nc" id="L63">                .addComponent(btn_logout)</span>
+<span class="nc" id="L64">                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))</span>
+<span class="nc" id="L65">            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_mmLayout.createSequentialGroup()</span>
+<span class="nc" id="L66">                .addContainerGap(92, Short.MAX_VALUE)</span>
+<span class="nc" id="L67">                .addGroup(panel_mmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)</span>
+<span class="nc" id="L68">                    .addComponent(btn_ticketing, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="nc" id="L69">                    .addComponent(btn_ms))</span>
+<span class="nc" id="L70">                .addGap(89, 89, 89))</span>
+        );
+<span class="nc" id="L72">        panel_mmLayout.setVerticalGroup(</span>
+<span class="nc" id="L73">            panel_mmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L74">            .addGroup(panel_mmLayout.createSequentialGroup()</span>
+<span class="nc" id="L75">                .addGap(72, 72, 72)</span>
+<span class="nc" id="L76">                .addComponent(btn_ticketing)</span>
+<span class="nc" id="L77">                .addGap(34, 34, 34)</span>
+<span class="nc" id="L78">                .addComponent(btn_ms)</span>
+<span class="nc" id="L79">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)</span>
+<span class="nc" id="L80">                .addComponent(btn_logout)</span>
+<span class="nc" id="L81">                .addContainerGap())</span>
+        );
+
+<span class="nc" id="L84">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());</span>
+<span class="nc" id="L85">        getContentPane().setLayout(layout);</span>
+<span class="nc" id="L86">        layout.setHorizontalGroup(</span>
+<span class="nc" id="L87">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L88">            .addComponent(panel_mm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+        );
+<span class="nc" id="L90">        layout.setVerticalGroup(</span>
+<span class="nc" id="L91">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L92">            .addComponent(panel_mm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+        );
+
+<span class="nc" id="L95">        pack();</span>
+<span class="nc" id="L96">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
+
+    private void btn_ticketingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ticketingActionPerformed
+<span class="nc" id="L99">        ticform obj_tf = new ticform();</span>
+<span class="nc" id="L100">        obj_tf.totf();</span>
+<span class="nc" id="L101">        this.setVisible(false);</span>
+<span class="nc" id="L102">    }//GEN-LAST:event_btn_ticketingActionPerformed</span>
+
+    private void btn_msActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_msActionPerformed
+<span class="nc" id="L105">        ms obj_ms = new ms();</span>
+<span class="nc" id="L106">        obj_ms.toms();</span>
+<span class="nc" id="L107">        this.setVisible(false);</span>
+<span class="nc" id="L108">    }//GEN-LAST:event_btn_msActionPerformed</span>
+
+    private void btn_logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_logoutActionPerformed
+<span class="nc" id="L111">        goback();</span>
+<span class="nc" id="L112">    }//GEN-LAST:event_btn_logoutActionPerformed</span>
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_logout;
+    private javax.swing.JButton btn_ms;
+    private javax.swing.JButton btn_ticketing;
+    private javax.swing.JPanel panel_mm;
+    // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void goback() 
+    {
+<span class="nc" id="L124">        loginForm obj_lf = new loginForm();</span>
+<span class="nc" id="L125">        obj_lf.setVisible(true);</span>
+<span class="nc" id="L126">        this.setVisible(false);</span>
+<span class="nc" id="L127">    }</span>
+
+    @Override
+    public void goback(List ls) 
+    {
+<span class="nc" id="L132">        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);</span>
+    }
+}
+
+<span class="nc" id="L136">class ticform</span>
+{
+<span class="nc" id="L138">    ticketingForm obj_tf = new ticketingForm();</span>
+<span class="nc" id="L139">    movieScheduleForm obj_ms = new movieScheduleForm();</span>
+    public void totf()
+    {
+<span class="nc" id="L142">        obj_tf.setVisible(true);</span>
+<span class="nc" id="L143">    }</span>
+}
+
+<span class="nc" id="L146">class ms extends ticform</span>
+{
+    public void toms()
+    {
+<span class="nc" id="L150">        obj_ms.setVisible(true);</span>
+<span class="nc" id="L151">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

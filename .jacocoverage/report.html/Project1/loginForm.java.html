@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>loginForm.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;leCinema&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">Project1</a> &gt; <span class="el_source">loginForm.java</span></div><h1>loginForm.java</h1><pre class="source lang-java linenums">package Project1;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class loginForm extends javax.swing.JFrame implements rstBTN, nextBTN
+{
+    String uname;
+    int pw;
+    
+    public loginForm() 
+<span class="fc" id="L12">    {</span>
+<span class="fc" id="L13">        initComponents();</span>
+<span class="fc" id="L14">        setLocationRelativeTo(this);</span>
+<span class="fc" id="L15">    }</span>
+
+    @SuppressWarnings(&quot;unchecked&quot;)
+    // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+<span class="fc" id="L21">        panel_login = new javax.swing.JPanel();</span>
+<span class="fc" id="L22">        lbl_title = new javax.swing.JLabel();</span>
+<span class="fc" id="L23">        lbl_uname = new javax.swing.JLabel();</span>
+<span class="fc" id="L24">        lbl_pw = new javax.swing.JLabel();</span>
+<span class="fc" id="L25">        btn_reset = new javax.swing.JButton();</span>
+<span class="fc" id="L26">        btn_login = new javax.swing.JButton();</span>
+<span class="fc" id="L27">        tf_uname = new javax.swing.JTextField();</span>
+<span class="fc" id="L28">        pwf_pw = new javax.swing.JPasswordField();</span>
+<span class="fc" id="L29">        btn_exit = new javax.swing.JButton();</span>
+
+<span class="fc" id="L31">        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);</span>
+
+<span class="fc" id="L33">        panel_login.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="fc" id="L34">        panel_login.setBorder(javax.swing.BorderFactory.createMatteBorder(8, 8, 8, 8, new java.awt.Color(0, 0, 0)));</span>
+
+<span class="fc" id="L36">        lbl_title.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 24)); // NOI18N</span>
+<span class="fc" id="L37">        lbl_title.setText(&quot;Login here:&quot;);</span>
+
+<span class="fc" id="L39">        lbl_uname.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="fc" id="L40">        lbl_uname.setText(&quot;Username&quot;);</span>
+
+<span class="fc" id="L42">        lbl_pw.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="fc" id="L43">        lbl_pw.setText(&quot;Password&quot;);</span>
+
+<span class="fc" id="L45">        btn_reset.setBackground(new java.awt.Color(0, 0, 0));</span>
+<span class="fc" id="L46">        btn_reset.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="fc" id="L47">        btn_reset.setForeground(new java.awt.Color(255, 255, 255));</span>
+<span class="fc" id="L48">        btn_reset.setText(&quot;Reset&quot;);</span>
+<span class="fc" id="L49">        btn_reset.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L51">                btn_resetActionPerformed(evt);</span>
+<span class="nc" id="L52">            }</span>
+        });
+
+<span class="fc" id="L55">        btn_login.setBackground(new java.awt.Color(0, 0, 0));</span>
+<span class="fc" id="L56">        btn_login.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="fc" id="L57">        btn_login.setForeground(new java.awt.Color(255, 255, 255));</span>
+<span class="fc" id="L58">        btn_login.setText(&quot;Login&quot;);</span>
+<span class="fc" id="L59">        btn_login.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L61">                btn_loginActionPerformed(evt);</span>
+<span class="nc" id="L62">            }</span>
+        });
+
+<span class="fc" id="L65">        tf_uname.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 0, 18)); // NOI18N</span>
+<span class="fc" id="L66">        tf_uname.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L68">                tf_unameActionPerformed(evt);</span>
+<span class="nc" id="L69">            }</span>
+        });
+
+<span class="fc" id="L72">        pwf_pw.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 0, 18)); // NOI18N</span>
+<span class="fc" id="L73">        pwf_pw.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L75">                pwf_pwActionPerformed(evt);</span>
+<span class="nc" id="L76">            }</span>
+        });
+
+<span class="fc" id="L79">        btn_exit.setBackground(new java.awt.Color(0, 0, 0));</span>
+<span class="fc" id="L80">        btn_exit.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="fc" id="L81">        btn_exit.setForeground(new java.awt.Color(255, 255, 255));</span>
+<span class="fc" id="L82">        btn_exit.setText(&quot;Exit&quot;);</span>
+<span class="fc" id="L83">        btn_exit.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L85">                btn_exitActionPerformed(evt);</span>
+<span class="nc" id="L86">            }</span>
+        });
+
+<span class="fc" id="L89">        javax.swing.GroupLayout panel_loginLayout = new javax.swing.GroupLayout(panel_login);</span>
+<span class="fc" id="L90">        panel_login.setLayout(panel_loginLayout);</span>
+<span class="fc" id="L91">        panel_loginLayout.setHorizontalGroup(</span>
+<span class="fc" id="L92">            panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="fc" id="L93">            .addGroup(panel_loginLayout.createSequentialGroup()</span>
+<span class="fc" id="L94">                .addGap(32, 32, 32)</span>
+<span class="fc" id="L95">                .addGroup(panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="fc" id="L96">                    .addGroup(panel_loginLayout.createSequentialGroup()</span>
+<span class="fc" id="L97">                        .addGap(19, 19, 19)</span>
+<span class="fc" id="L98">                        .addGroup(panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)</span>
+<span class="fc" id="L99">                            .addGroup(panel_loginLayout.createSequentialGroup()</span>
+<span class="fc" id="L100">                                .addComponent(btn_exit)</span>
+<span class="fc" id="L101">                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="fc" id="L102">                                .addComponent(btn_reset)</span>
+<span class="fc" id="L103">                                .addGap(38, 38, 38)</span>
+<span class="fc" id="L104">                                .addComponent(btn_login))</span>
+<span class="fc" id="L105">                            .addGroup(panel_loginLayout.createSequentialGroup()</span>
+<span class="fc" id="L106">                                .addGroup(panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="fc" id="L107">                                    .addComponent(lbl_pw)</span>
+<span class="fc" id="L108">                                    .addComponent(lbl_uname))</span>
+<span class="fc" id="L109">                                .addGap(56, 56, 56)</span>
+<span class="fc" id="L110">                                .addGroup(panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)</span>
+<span class="fc" id="L111">                                    .addComponent(tf_uname)</span>
+<span class="fc" id="L112">                                    .addComponent(pwf_pw, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))))</span>
+<span class="fc" id="L113">                    .addComponent(lbl_title))</span>
+<span class="fc" id="L114">                .addContainerGap(50, Short.MAX_VALUE))</span>
+        );
+<span class="fc" id="L116">        panel_loginLayout.setVerticalGroup(</span>
+<span class="fc" id="L117">            panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="fc" id="L118">            .addGroup(panel_loginLayout.createSequentialGroup()</span>
+<span class="fc" id="L119">                .addGap(25, 25, 25)</span>
+<span class="fc" id="L120">                .addComponent(lbl_title)</span>
+<span class="fc" id="L121">                .addGap(62, 62, 62)</span>
+<span class="fc" id="L122">                .addGroup(panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="fc" id="L123">                    .addComponent(lbl_uname)</span>
+<span class="fc" id="L124">                    .addComponent(tf_uname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="fc" id="L125">                .addGap(34, 34, 34)</span>
+<span class="fc" id="L126">                .addGroup(panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="fc" id="L127">                    .addComponent(lbl_pw)</span>
+<span class="fc" id="L128">                    .addComponent(pwf_pw, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="fc" id="L129">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)</span>
+<span class="fc" id="L130">                .addGroup(panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="fc" id="L131">                    .addComponent(btn_reset)</span>
+<span class="fc" id="L132">                    .addComponent(btn_login)</span>
+<span class="fc" id="L133">                    .addComponent(btn_exit))</span>
+<span class="fc" id="L134">                .addGap(28, 28, 28))</span>
+        );
+
+<span class="fc" id="L137">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());</span>
+<span class="fc" id="L138">        getContentPane().setLayout(layout);</span>
+<span class="fc" id="L139">        layout.setHorizontalGroup(</span>
+<span class="fc" id="L140">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="fc" id="L141">            .addGroup(layout.createSequentialGroup()</span>
+<span class="fc" id="L142">                .addComponent(panel_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="fc" id="L143">                .addGap(0, 0, Short.MAX_VALUE))</span>
+        );
+<span class="fc" id="L145">        layout.setVerticalGroup(</span>
+<span class="fc" id="L146">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="fc" id="L147">            .addGroup(layout.createSequentialGroup()</span>
+<span class="fc" id="L148">                .addComponent(panel_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="fc" id="L149">                .addGap(0, 0, Short.MAX_VALUE))</span>
+        );
+
+<span class="fc" id="L152">        pack();</span>
+<span class="fc" id="L153">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
+
+    private void btn_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_loginActionPerformed
+<span class="nc" id="L156">        nextbtn();</span>
+<span class="nc" id="L157">    }//GEN-LAST:event_btn_loginActionPerformed</span>
+
+    private void btn_resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_resetActionPerformed
+<span class="nc" id="L160">        resetbtn();</span>
+<span class="nc" id="L161">    }//GEN-LAST:event_btn_resetActionPerformed</span>
+
+    private void btn_exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_exitActionPerformed
+<span class="nc" id="L164">        System.exit(0);</span>
+<span class="nc" id="L165">    }//GEN-LAST:event_btn_exitActionPerformed</span>
+
+    private void tf_unameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_unameActionPerformed
+        
+<span class="nc" id="L169">    }//GEN-LAST:event_tf_unameActionPerformed</span>
+
+    private void pwf_pwActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwf_pwActionPerformed
+        
+<span class="nc" id="L173">    }//GEN-LAST:event_pwf_pwActionPerformed</span>
+    
+    public static void main(String args[]) {
+<span class="fc" id="L176">        java.awt.EventQueue.invokeLater(new Runnable() {</span>
+            public void run() {
+<span class="fc" id="L178">                new loginForm().setVisible(true);</span>
+<span class="fc" id="L179">            }</span>
+        });
+<span class="fc" id="L181">    }</span>
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_exit;
+    private javax.swing.JButton btn_login;
+    private javax.swing.JButton btn_reset;
+    private javax.swing.JLabel lbl_pw;
+    private javax.swing.JLabel lbl_title;
+    private javax.swing.JLabel lbl_uname;
+    private javax.swing.JPanel panel_login;
+    private javax.swing.JPasswordField pwf_pw;
+    private javax.swing.JTextField tf_uname;
+    // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void resetbtn() 
+    {
+<span class="nc" id="L198">        tf_uname.setText(null);</span>
+<span class="nc" id="L199">        pwf_pw.setText(null);</span>
+<span class="nc" id="L200">    }</span>
+
+    @Override
+    public void nextbtn() 
+    {
+        try 
+        {
+<span class="nc" id="L207">            account obj_acc = new account();</span>
+<span class="nc" id="L208">            uname = tf_uname.getText();</span>
+<span class="nc" id="L209">            pw = Integer.parseInt(pwf_pw.getText());</span>
+<span class="nc bnc" id="L210" title="All 4 branches missed.">            if (uname.equals(obj_acc.adminacc(uname)) &amp;&amp; pw == obj_acc.adminacc(pw)) </span>
+            {
+<span class="nc" id="L212">                mainMenuForm obj_mm = new mainMenuForm();</span>
+<span class="nc" id="L213">                obj_mm.setVisible(true);</span>
+<span class="nc" id="L214">                this.setVisible(false);</span>
+<span class="nc" id="L215">            }</span>
+            else
+            {
+<span class="nc" id="L218">                JOptionPane.showMessageDialog(this, &quot;Username or Password incorrect!&quot;, </span>
+                        &quot;Login Failed.&quot;, JOptionPane.INFORMATION_MESSAGE);
+<span class="nc" id="L220">                tf_uname.setText(&quot;&quot;);</span>
+<span class="nc" id="L221">                pwf_pw.setText(null);</span>
+            }
+        } 
+<span class="nc" id="L224">        catch (Exception e) </span>
+        {
+<span class="nc" id="L226">            JOptionPane.showMessageDialog(this, &quot;Password field only accept number.&quot;, </span>
+                    &quot;Invalid input.&quot;, JOptionPane.INFORMATION_MESSAGE);
+<span class="nc" id="L228">            resetbtn();</span>
+<span class="nc" id="L229">        }</span>
+<span class="nc" id="L230">    }</span>
+
+    @Override
+    public void nextbtn(java.util.List ls) {
+<span class="nc" id="L234">        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;); //To change body of generated methods, choose Tools | Templates.</span>
+    }
+
+}
+
+<span class="nc" id="L239">class account</span>
+{
+    public String adminacc(String username)
+    {
+<span class="nc" id="L243">        username = &quot;admin@gmail.com&quot;;</span>
+<span class="nc" id="L244">        return username;</span>
+    }
+    public int adminacc(int password)
+    {
+<span class="nc" id="L248">        password = 121314;</span>
+<span class="nc" id="L249">        return password;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

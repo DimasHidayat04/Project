@@ -1,0 +1,1132 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>ticketingForm.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;leCinema&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">Project1</a> &gt; <span class="el_source">ticketingForm.java</span></div><h1>ticketingForm.java</h1><pre class="source lang-java linenums">package Project1;
+import static Project1.ticketingForm.obj_sgd;
+import javax.swing.*;
+
+import java.util.*;
+public class ticketingForm extends javax.swing.JFrame implements gbBTN, rstBTN, nextBTN
+{
+<span class="nc" id="L8">    private String time, movie, tp, seat=&quot;&quot;, qty, theater, cm;</span>
+
+<span class="nc" id="L10">    private double totalprice, price = 55000, change, cash, quantity, theaterno;</span>
+
+<span class="nc" id="L12">    static setgetData obj_sgd = new setgetData();</span>
+<span class="nc" id="L13">    List list = new ArrayList&lt;&gt;();</span>
+    
+    public ticketingForm() 
+<span class="nc" id="L16">    {</span>
+<span class="nc" id="L17">        initComponents();</span>
+<span class="nc" id="L18">        setLocationRelativeTo(this);</span>
+<span class="nc" id="L19">    }</span>
+
+    @SuppressWarnings(&quot;unchecked&quot;)
+    // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+<span class="nc" id="L25">        btngr_time = new javax.swing.ButtonGroup();</span>
+<span class="nc" id="L26">        panel_ticket = new javax.swing.JPanel();</span>
+<span class="nc" id="L27">        lbl_title = new javax.swing.JLabel();</span>
+<span class="nc" id="L28">        lbl_movie = new javax.swing.JLabel();</span>
+<span class="nc" id="L29">        lbl_quantity = new javax.swing.JLabel();</span>
+<span class="nc" id="L30">        lbl_time = new javax.swing.JLabel();</span>
+<span class="nc" id="L31">        lbl_seat = new javax.swing.JLabel();</span>
+<span class="nc" id="L32">        comb_movie = new javax.swing.JComboBox&lt;&gt;();</span>
+<span class="nc" id="L33">        rb_time1 = new javax.swing.JRadioButton();</span>
+<span class="nc" id="L34">        rb_time2 = new javax.swing.JRadioButton();</span>
+<span class="nc" id="L35">        rb_time3 = new javax.swing.JRadioButton();</span>
+<span class="nc" id="L36">        btn_reset = new javax.swing.JButton();</span>
+<span class="nc" id="L37">        btn_goback = new javax.swing.JButton();</span>
+<span class="nc" id="L38">        tf_quantity = new javax.swing.JTextField();</span>
+<span class="nc" id="L39">        panel_od = new javax.swing.JPanel();</span>
+<span class="nc" id="L40">        lbl_od = new javax.swing.JLabel();</span>
+<span class="nc" id="L41">        lbl_odmovie = new javax.swing.JLabel();</span>
+<span class="nc" id="L42">        lbl_odquantity = new javax.swing.JLabel();</span>
+<span class="nc" id="L43">        lbl_odtime = new javax.swing.JLabel();</span>
+<span class="nc" id="L44">        lbl_odseat = new javax.swing.JLabel();</span>
+<span class="nc" id="L45">        btn_pt = new javax.swing.JButton();</span>
+<span class="nc" id="L46">        tf_odmovie = new javax.swing.JTextField();</span>
+<span class="nc" id="L47">        tf_odquantity = new javax.swing.JTextField();</span>
+<span class="nc" id="L48">        tf_odtime = new javax.swing.JTextField();</span>
+<span class="nc" id="L49">        tf_odseat = new javax.swing.JTextField();</span>
+<span class="nc" id="L50">        lbl_odtp = new javax.swing.JLabel();</span>
+<span class="nc" id="L51">        tf_odtp = new javax.swing.JTextField();</span>
+<span class="nc" id="L52">        lbl_odcash = new javax.swing.JLabel();</span>
+<span class="nc" id="L53">        tf_odcash = new javax.swing.JTextField();</span>
+<span class="nc" id="L54">        lbl_odcm = new javax.swing.JLabel();</span>
+<span class="nc" id="L55">        tf_odcm = new javax.swing.JTextField();</span>
+<span class="nc" id="L56">        cb_seatA1 = new javax.swing.JCheckBox();</span>
+<span class="nc" id="L57">        cb_seatA2 = new javax.swing.JCheckBox();</span>
+<span class="nc" id="L58">        cb_seatA3 = new javax.swing.JCheckBox();</span>
+<span class="nc" id="L59">        cb_seatA4 = new javax.swing.JCheckBox();</span>
+<span class="nc" id="L60">        cb_seatA5 = new javax.swing.JCheckBox();</span>
+<span class="nc" id="L61">        cb_seatB5 = new javax.swing.JCheckBox();</span>
+<span class="nc" id="L62">        cb_seatB4 = new javax.swing.JCheckBox();</span>
+<span class="nc" id="L63">        cb_seatB3 = new javax.swing.JCheckBox();</span>
+<span class="nc" id="L64">        cb_seatB2 = new javax.swing.JCheckBox();</span>
+<span class="nc" id="L65">        cb_seatB1 = new javax.swing.JCheckBox();</span>
+<span class="nc" id="L66">        cb_seatC1 = new javax.swing.JCheckBox();</span>
+<span class="nc" id="L67">        cb_seatC2 = new javax.swing.JCheckBox();</span>
+<span class="nc" id="L68">        cb_seatC3 = new javax.swing.JCheckBox();</span>
+<span class="nc" id="L69">        cb_seatC4 = new javax.swing.JCheckBox();</span>
+<span class="nc" id="L70">        cb_seatC5 = new javax.swing.JCheckBox();</span>
+
+<span class="nc" id="L72">        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);</span>
+
+<span class="nc" id="L74">        panel_ticket.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L75">        panel_ticket.setBorder(javax.swing.BorderFactory.createMatteBorder(8, 8, 8, 8, new java.awt.Color(0, 0, 0)));</span>
+
+<span class="nc" id="L77">        lbl_title.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 36)); // NOI18N</span>
+<span class="nc" id="L78">        lbl_title.setText(&quot;Ticketing&quot;);</span>
+
+<span class="nc" id="L80">        lbl_movie.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L81">        lbl_movie.setText(&quot;Movie&quot;);</span>
+
+<span class="nc" id="L83">        lbl_quantity.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L84">        lbl_quantity.setText(&quot;Quantity&quot;);</span>
+
+<span class="nc" id="L86">        lbl_time.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L87">        lbl_time.setText(&quot;Time&quot;);</span>
+
+<span class="nc" id="L89">        lbl_seat.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L90">        lbl_seat.setText(&quot;Select the seat&quot;);</span>
+
+<span class="nc" id="L92">        comb_movie.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L93">        comb_movie.setModel(new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;---Choose Movie---&quot;, &quot;Harry Potter and the Half Blood Prince&quot;, &quot;Avengers : End Game&quot; }));</span>
+<span class="nc" id="L94">        comb_movie.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L96">                comb_movieActionPerformed(evt);</span>
+<span class="nc" id="L97">            }</span>
+        });
+
+<span class="nc" id="L100">        btngr_time.add(rb_time1);</span>
+<span class="nc" id="L101">        rb_time1.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L102">        rb_time1.setText(&quot;12.30&quot;);</span>
+<span class="nc" id="L103">        rb_time1.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L105">                rb_time1ActionPerformed(evt);</span>
+<span class="nc" id="L106">            }</span>
+        });
+
+<span class="nc" id="L109">        btngr_time.add(rb_time2);</span>
+<span class="nc" id="L110">        rb_time2.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L111">        rb_time2.setText(&quot;15.30&quot;);</span>
+<span class="nc" id="L112">        rb_time2.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L114">                rb_time2ActionPerformed(evt);</span>
+<span class="nc" id="L115">            }</span>
+        });
+
+<span class="nc" id="L118">        btngr_time.add(rb_time3);</span>
+<span class="nc" id="L119">        rb_time3.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L120">        rb_time3.setText(&quot;19.00&quot;);</span>
+<span class="nc" id="L121">        rb_time3.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L123">                rb_time3ActionPerformed(evt);</span>
+<span class="nc" id="L124">            }</span>
+        });
+
+<span class="nc" id="L127">        btn_reset.setBackground(new java.awt.Color(0, 0, 0));</span>
+<span class="nc" id="L128">        btn_reset.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L129">        btn_reset.setForeground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L130">        btn_reset.setText(&quot;Reset Selection&quot;);</span>
+<span class="nc" id="L131">        btn_reset.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L133">                btn_resetActionPerformed(evt);</span>
+<span class="nc" id="L134">            }</span>
+        });
+
+<span class="nc" id="L137">        btn_goback.setBackground(new java.awt.Color(0, 0, 0));</span>
+<span class="nc" id="L138">        btn_goback.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L139">        btn_goback.setForeground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L140">        btn_goback.setText(&quot;Go Back&quot;);</span>
+<span class="nc" id="L141">        btn_goback.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L143">                btn_gobackActionPerformed(evt);</span>
+<span class="nc" id="L144">            }</span>
+        });
+
+<span class="nc" id="L147">        tf_quantity.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L148">        tf_quantity.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L150">                tf_quantityActionPerformed(evt);</span>
+<span class="nc" id="L151">            }</span>
+        });
+<span class="nc" id="L153">        tf_quantity.addKeyListener(new java.awt.event.KeyAdapter() {</span>
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+<span class="nc" id="L155">                tf_quantityKeyReleased(evt);</span>
+<span class="nc" id="L156">            }</span>
+        });
+
+<span class="nc" id="L159">        panel_od.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L160">        panel_od.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 8, 0, 0, new java.awt.Color(0, 0, 0)));</span>
+
+<span class="nc" id="L162">        lbl_od.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 36)); // NOI18N</span>
+<span class="nc" id="L163">        lbl_od.setText(&quot;Order Details&quot;);</span>
+
+<span class="nc" id="L165">        lbl_odmovie.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L166">        lbl_odmovie.setText(&quot;Movie&quot;);</span>
+
+<span class="nc" id="L168">        lbl_odquantity.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L169">        lbl_odquantity.setText(&quot;Quantity&quot;);</span>
+
+<span class="nc" id="L171">        lbl_odtime.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L172">        lbl_odtime.setText(&quot;Time&quot;);</span>
+
+<span class="nc" id="L174">        lbl_odseat.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L175">        lbl_odseat.setText(&quot;Seat&quot;);</span>
+
+<span class="nc" id="L177">        btn_pt.setBackground(new java.awt.Color(0, 0, 0));</span>
+<span class="nc" id="L178">        btn_pt.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L179">        btn_pt.setForeground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L180">        btn_pt.setText(&quot;Print Ticket&quot;);</span>
+<span class="nc" id="L181">        btn_pt.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L183">                btn_ptActionPerformed(evt);</span>
+<span class="nc" id="L184">            }</span>
+        });
+
+<span class="nc" id="L187">        tf_odmovie.setEditable(false);</span>
+<span class="nc" id="L188">        tf_odmovie.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L189">        tf_odmovie.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L190">        tf_odmovie.setToolTipText(&quot;&quot;);</span>
+<span class="nc" id="L191">        tf_odmovie.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L193">                tf_odmovieActionPerformed(evt);</span>
+<span class="nc" id="L194">            }</span>
+        });
+
+<span class="nc" id="L197">        tf_odquantity.setEditable(false);</span>
+<span class="nc" id="L198">        tf_odquantity.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L199">        tf_odquantity.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L200">        tf_odquantity.setToolTipText(&quot;&quot;);</span>
+<span class="nc" id="L201">        tf_odquantity.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L203">                tf_odquantityActionPerformed(evt);</span>
+<span class="nc" id="L204">            }</span>
+        });
+
+<span class="nc" id="L207">        tf_odtime.setEditable(false);</span>
+<span class="nc" id="L208">        tf_odtime.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L209">        tf_odtime.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L210">        tf_odtime.setToolTipText(&quot;&quot;);</span>
+<span class="nc" id="L211">        tf_odtime.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L213">                tf_odtimeActionPerformed(evt);</span>
+<span class="nc" id="L214">            }</span>
+        });
+
+<span class="nc" id="L217">        tf_odseat.setEditable(false);</span>
+<span class="nc" id="L218">        tf_odseat.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L219">        tf_odseat.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L220">        tf_odseat.setToolTipText(&quot;&quot;);</span>
+<span class="nc" id="L221">        tf_odseat.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L223">                tf_odseatActionPerformed(evt);</span>
+<span class="nc" id="L224">            }</span>
+        });
+
+<span class="nc" id="L227">        lbl_odtp.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L228">        lbl_odtp.setText(&quot;Total Price&quot;);</span>
+
+<span class="nc" id="L230">        tf_odtp.setEditable(false);</span>
+<span class="nc" id="L231">        tf_odtp.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L232">        tf_odtp.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L233">        tf_odtp.setToolTipText(&quot;&quot;);</span>
+<span class="nc" id="L234">        tf_odtp.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L236">                tf_odtpActionPerformed(evt);</span>
+<span class="nc" id="L237">            }</span>
+        });
+
+<span class="nc" id="L240">        lbl_odcash.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L241">        lbl_odcash.setText(&quot;Cash&quot;);</span>
+
+<span class="nc" id="L243">        tf_odcash.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L244">        tf_odcash.setToolTipText(&quot;&quot;);</span>
+<span class="nc" id="L245">        tf_odcash.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L247">                tf_odcashActionPerformed(evt);</span>
+<span class="nc" id="L248">            }</span>
+        });
+<span class="nc" id="L250">        tf_odcash.addKeyListener(new java.awt.event.KeyAdapter() {</span>
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+<span class="nc" id="L252">                tf_odcashKeyReleased(evt);</span>
+<span class="nc" id="L253">            }</span>
+        });
+
+<span class="nc" id="L256">        lbl_odcm.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L257">        lbl_odcm.setText(&quot;Change&quot;);</span>
+
+<span class="nc" id="L259">        tf_odcm.setEditable(false);</span>
+<span class="nc" id="L260">        tf_odcm.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L261">        tf_odcm.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L262">        tf_odcm.setToolTipText(&quot;&quot;);</span>
+<span class="nc" id="L263">        tf_odcm.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L265">                tf_odcmActionPerformed(evt);</span>
+<span class="nc" id="L266">            }</span>
+        });
+
+<span class="nc" id="L269">        javax.swing.GroupLayout panel_odLayout = new javax.swing.GroupLayout(panel_od);</span>
+<span class="nc" id="L270">        panel_od.setLayout(panel_odLayout);</span>
+<span class="nc" id="L271">        panel_odLayout.setHorizontalGroup(</span>
+<span class="nc" id="L272">            panel_odLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L273">            .addGroup(panel_odLayout.createSequentialGroup()</span>
+<span class="nc" id="L274">                .addContainerGap()</span>
+<span class="nc" id="L275">                .addGroup(panel_odLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L276">                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_odLayout.createSequentialGroup()</span>
+<span class="nc" id="L277">                        .addGap(0, 0, Short.MAX_VALUE)</span>
+<span class="nc" id="L278">                        .addGroup(panel_odLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L279">                            .addComponent(lbl_odquantity)</span>
+<span class="nc" id="L280">                            .addComponent(lbl_odmovie)</span>
+<span class="nc" id="L281">                            .addComponent(lbl_odtime)</span>
+<span class="nc" id="L282">                            .addComponent(lbl_odseat))</span>
+<span class="nc" id="L283">                        .addGap(441, 441, 441))</span>
+<span class="nc" id="L284">                    .addGroup(panel_odLayout.createSequentialGroup()</span>
+<span class="nc" id="L285">                        .addGroup(panel_odLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)</span>
+<span class="nc" id="L286">                            .addGroup(panel_odLayout.createSequentialGroup()</span>
+<span class="nc" id="L287">                                .addGroup(panel_odLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L288">                                    .addComponent(lbl_odcm)</span>
+<span class="nc" id="L289">                                    .addComponent(lbl_odtp)</span>
+<span class="nc" id="L290">                                    .addComponent(lbl_odcash))</span>
+<span class="nc" id="L291">                                .addGap(18, 18, 18)</span>
+<span class="nc" id="L292">                                .addGroup(panel_odLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L293">                                    .addGroup(panel_odLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)</span>
+<span class="nc" id="L294">                                        .addComponent(tf_odcash, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L295">                                        .addComponent(tf_odcm, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L296">                                        .addComponent(tf_odtp, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L297">                                    .addGroup(panel_odLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L298">                                        .addComponent(tf_odseat, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L299">                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_odLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L300">                                            .addGroup(panel_odLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)</span>
+<span class="nc" id="L301">                                                .addComponent(tf_odquantity, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L302">                                                .addComponent(tf_odtime, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L303">                                            .addComponent(tf_odmovie, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)))))</span>
+<span class="nc" id="L304">                            .addComponent(btn_pt))</span>
+<span class="nc" id="L305">                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))</span>
+<span class="nc" id="L306">            .addGroup(panel_odLayout.createSequentialGroup()</span>
+<span class="nc" id="L307">                .addGap(155, 155, 155)</span>
+<span class="nc" id="L308">                .addComponent(lbl_od)</span>
+<span class="nc" id="L309">                .addGap(0, 0, Short.MAX_VALUE))</span>
+        );
+<span class="nc" id="L311">        panel_odLayout.setVerticalGroup(</span>
+<span class="nc" id="L312">            panel_odLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L313">            .addGroup(panel_odLayout.createSequentialGroup()</span>
+<span class="nc" id="L314">                .addContainerGap()</span>
+<span class="nc" id="L315">                .addComponent(lbl_od)</span>
+<span class="nc" id="L316">                .addGap(34, 34, 34)</span>
+<span class="nc" id="L317">                .addGroup(panel_odLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L318">                    .addComponent(lbl_odmovie)</span>
+<span class="nc" id="L319">                    .addComponent(tf_odmovie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L320">                .addGap(13, 13, 13)</span>
+<span class="nc" id="L321">                .addGroup(panel_odLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L322">                    .addComponent(lbl_odquantity)</span>
+<span class="nc" id="L323">                    .addComponent(tf_odquantity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L324">                .addGap(19, 19, 19)</span>
+<span class="nc" id="L325">                .addGroup(panel_odLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L326">                    .addComponent(lbl_odtime)</span>
+<span class="nc" id="L327">                    .addComponent(tf_odtime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L328">                .addGap(13, 13, 13)</span>
+<span class="nc" id="L329">                .addGroup(panel_odLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L330">                    .addComponent(lbl_odseat)</span>
+<span class="nc" id="L331">                    .addComponent(tf_odseat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L332">                .addGap(18, 18, 18)</span>
+<span class="nc" id="L333">                .addGroup(panel_odLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L334">                    .addGroup(panel_odLayout.createSequentialGroup()</span>
+<span class="nc" id="L335">                        .addComponent(lbl_odtp)</span>
+<span class="nc" id="L336">                        .addGap(19, 19, 19)</span>
+<span class="nc" id="L337">                        .addComponent(lbl_odcash)</span>
+<span class="nc" id="L338">                        .addGap(19, 19, 19)</span>
+<span class="nc" id="L339">                        .addComponent(lbl_odcm))</span>
+<span class="nc" id="L340">                    .addGroup(panel_odLayout.createSequentialGroup()</span>
+<span class="nc" id="L341">                        .addComponent(tf_odtp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L342">                        .addGap(18, 18, 18)</span>
+<span class="nc" id="L343">                        .addComponent(tf_odcash, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L344">                        .addGap(18, 18, 18)</span>
+<span class="nc" id="L345">                        .addComponent(tf_odcm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))</span>
+<span class="nc" id="L346">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)</span>
+<span class="nc" id="L347">                .addComponent(btn_pt)</span>
+<span class="nc" id="L348">                .addContainerGap())</span>
+        );
+
+<span class="nc" id="L351">        cb_seatA1.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L352">        cb_seatA1.setText(&quot;A1&quot;);</span>
+<span class="nc" id="L353">        cb_seatA1.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L355">                cb_seatA1ActionPerformed(evt);</span>
+<span class="nc" id="L356">            }</span>
+        });
+
+<span class="nc" id="L359">        cb_seatA2.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L360">        cb_seatA2.setText(&quot;A2&quot;);</span>
+<span class="nc" id="L361">        cb_seatA2.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L363">                cb_seatA2ActionPerformed(evt);</span>
+<span class="nc" id="L364">            }</span>
+        });
+
+<span class="nc" id="L367">        cb_seatA3.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L368">        cb_seatA3.setText(&quot;A3&quot;);</span>
+<span class="nc" id="L369">        cb_seatA3.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L371">                cb_seatA3ActionPerformed(evt);</span>
+<span class="nc" id="L372">            }</span>
+        });
+
+<span class="nc" id="L375">        cb_seatA4.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L376">        cb_seatA4.setText(&quot;A4&quot;);</span>
+<span class="nc" id="L377">        cb_seatA4.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L379">                cb_seatA4ActionPerformed(evt);</span>
+<span class="nc" id="L380">            }</span>
+        });
+
+<span class="nc" id="L383">        cb_seatA5.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L384">        cb_seatA5.setText(&quot;A5&quot;);</span>
+<span class="nc" id="L385">        cb_seatA5.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L387">                cb_seatA5ActionPerformed(evt);</span>
+<span class="nc" id="L388">            }</span>
+        });
+
+<span class="nc" id="L391">        cb_seatB5.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L392">        cb_seatB5.setText(&quot;B5&quot;);</span>
+<span class="nc" id="L393">        cb_seatB5.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L395">                cb_seatB5ActionPerformed(evt);</span>
+<span class="nc" id="L396">            }</span>
+        });
+
+<span class="nc" id="L399">        cb_seatB4.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L400">        cb_seatB4.setText(&quot;B4&quot;);</span>
+<span class="nc" id="L401">        cb_seatB4.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L403">                cb_seatB4ActionPerformed(evt);</span>
+<span class="nc" id="L404">            }</span>
+        });
+
+<span class="nc" id="L407">        cb_seatB3.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L408">        cb_seatB3.setText(&quot;B3&quot;);</span>
+<span class="nc" id="L409">        cb_seatB3.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L411">                cb_seatB3ActionPerformed(evt);</span>
+<span class="nc" id="L412">            }</span>
+        });
+
+<span class="nc" id="L415">        cb_seatB2.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L416">        cb_seatB2.setText(&quot;B2&quot;);</span>
+<span class="nc" id="L417">        cb_seatB2.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L419">                cb_seatB2ActionPerformed(evt);</span>
+<span class="nc" id="L420">            }</span>
+        });
+
+<span class="nc" id="L423">        cb_seatB1.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L424">        cb_seatB1.setText(&quot;B1&quot;);</span>
+<span class="nc" id="L425">        cb_seatB1.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L427">                cb_seatB1ActionPerformed(evt);</span>
+<span class="nc" id="L428">            }</span>
+        });
+
+<span class="nc" id="L431">        cb_seatC1.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L432">        cb_seatC1.setText(&quot;C1&quot;);</span>
+<span class="nc" id="L433">        cb_seatC1.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L435">                cb_seatC1ActionPerformed(evt);</span>
+<span class="nc" id="L436">            }</span>
+        });
+
+<span class="nc" id="L439">        cb_seatC2.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L440">        cb_seatC2.setText(&quot;C2&quot;);</span>
+<span class="nc" id="L441">        cb_seatC2.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L443">                cb_seatC2ActionPerformed(evt);</span>
+<span class="nc" id="L444">            }</span>
+        });
+
+<span class="nc" id="L447">        cb_seatC3.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L448">        cb_seatC3.setText(&quot;C3&quot;);</span>
+<span class="nc" id="L449">        cb_seatC3.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L451">                cb_seatC3ActionPerformed(evt);</span>
+<span class="nc" id="L452">            }</span>
+        });
+
+<span class="nc" id="L455">        cb_seatC4.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L456">        cb_seatC4.setText(&quot;C4&quot;);</span>
+<span class="nc" id="L457">        cb_seatC4.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L459">                cb_seatC4ActionPerformed(evt);</span>
+<span class="nc" id="L460">            }</span>
+        });
+
+<span class="nc" id="L463">        cb_seatC5.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L464">        cb_seatC5.setText(&quot;C5&quot;);</span>
+<span class="nc" id="L465">        cb_seatC5.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L467">                cb_seatC5ActionPerformed(evt);</span>
+<span class="nc" id="L468">            }</span>
+        });
+
+<span class="nc" id="L471">        javax.swing.GroupLayout panel_ticketLayout = new javax.swing.GroupLayout(panel_ticket);</span>
+<span class="nc" id="L472">        panel_ticket.setLayout(panel_ticketLayout);</span>
+<span class="nc" id="L473">        panel_ticketLayout.setHorizontalGroup(</span>
+<span class="nc" id="L474">            panel_ticketLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L475">            .addGroup(panel_ticketLayout.createSequentialGroup()</span>
+<span class="nc" id="L476">                .addGap(28, 28, 28)</span>
+<span class="nc" id="L477">                .addComponent(btn_goback)</span>
+<span class="nc" id="L478">                .addGap(537, 537, 537))</span>
+<span class="nc" id="L479">            .addGroup(panel_ticketLayout.createSequentialGroup()</span>
+<span class="nc" id="L480">                .addGroup(panel_ticketLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L481">                    .addGroup(panel_ticketLayout.createSequentialGroup()</span>
+<span class="nc" id="L482">                        .addContainerGap()</span>
+<span class="nc" id="L483">                        .addGroup(panel_ticketLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)</span>
+<span class="nc" id="L484">                            .addComponent(lbl_quantity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="nc" id="L485">                            .addComponent(lbl_movie)</span>
+<span class="nc" id="L486">                            .addComponent(lbl_time)</span>
+<span class="nc" id="L487">                            .addComponent(lbl_seat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))</span>
+<span class="nc" id="L488">                        .addGroup(panel_ticketLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L489">                            .addGroup(panel_ticketLayout.createSequentialGroup()</span>
+<span class="nc" id="L490">                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="nc" id="L491">                                .addComponent(btn_reset, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L492">                                .addGap(51, 51, 51))</span>
+<span class="nc" id="L493">                            .addGroup(panel_ticketLayout.createSequentialGroup()</span>
+<span class="nc" id="L494">                                .addGap(18, 18, 18)</span>
+<span class="nc" id="L495">                                .addGroup(panel_ticketLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L496">                                    .addGroup(panel_ticketLayout.createSequentialGroup()</span>
+<span class="nc" id="L497">                                        .addComponent(cb_seatA1)</span>
+<span class="nc" id="L498">                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="nc" id="L499">                                        .addComponent(cb_seatA2)</span>
+<span class="nc" id="L500">                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="nc" id="L501">                                        .addComponent(cb_seatA3)</span>
+<span class="nc" id="L502">                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="nc" id="L503">                                        .addComponent(cb_seatA4)</span>
+<span class="nc" id="L504">                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="nc" id="L505">                                        .addComponent(cb_seatA5))</span>
+<span class="nc" id="L506">                                    .addGroup(panel_ticketLayout.createSequentialGroup()</span>
+<span class="nc" id="L507">                                        .addGroup(panel_ticketLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)</span>
+<span class="nc" id="L508">                                            .addGroup(panel_ticketLayout.createSequentialGroup()</span>
+<span class="nc" id="L509">                                                .addComponent(cb_seatC1)</span>
+<span class="nc" id="L510">                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="nc" id="L511">                                                .addComponent(cb_seatC2))</span>
+<span class="nc" id="L512">                                            .addGroup(panel_ticketLayout.createSequentialGroup()</span>
+<span class="nc" id="L513">                                                .addComponent(cb_seatB1)</span>
+<span class="nc" id="L514">                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="nc" id="L515">                                                .addComponent(cb_seatB2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))</span>
+<span class="nc" id="L516">                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="nc" id="L517">                                        .addGroup(panel_ticketLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)</span>
+<span class="nc" id="L518">                                            .addComponent(cb_seatB3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="nc" id="L519">                                            .addComponent(cb_seatC3))</span>
+<span class="nc" id="L520">                                        .addGroup(panel_ticketLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L521">                                            .addGroup(panel_ticketLayout.createSequentialGroup()</span>
+<span class="nc" id="L522">                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="nc" id="L523">                                                .addComponent(cb_seatC4))</span>
+<span class="nc" id="L524">                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_ticketLayout.createSequentialGroup()</span>
+<span class="nc" id="L525">                                                .addGap(4, 4, 4)</span>
+<span class="nc" id="L526">                                                .addComponent(cb_seatB4)))</span>
+<span class="nc" id="L527">                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="nc" id="L528">                                        .addGroup(panel_ticketLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L529">                                            .addComponent(cb_seatB5)</span>
+<span class="nc" id="L530">                                            .addComponent(cb_seatC5)))</span>
+<span class="nc" id="L531">                                    .addGroup(panel_ticketLayout.createSequentialGroup()</span>
+<span class="nc" id="L532">                                        .addComponent(rb_time1)</span>
+<span class="nc" id="L533">                                        .addGap(18, 18, 18)</span>
+<span class="nc" id="L534">                                        .addComponent(rb_time2)</span>
+<span class="nc" id="L535">                                        .addGap(18, 18, 18)</span>
+<span class="nc" id="L536">                                        .addComponent(rb_time3))</span>
+<span class="nc" id="L537">                                    .addComponent(tf_quantity, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L538">                                    .addComponent(comb_movie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L539">                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))</span>
+<span class="nc" id="L540">                    .addGroup(panel_ticketLayout.createSequentialGroup()</span>
+<span class="nc" id="L541">                        .addGap(200, 200, 200)</span>
+<span class="nc" id="L542">                        .addComponent(lbl_title)</span>
+<span class="nc" id="L543">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))</span>
+<span class="nc" id="L544">                .addComponent(panel_od, javax.swing.GroupLayout.PREFERRED_SIZE, 511, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L545">                .addContainerGap())</span>
+        );
+<span class="nc" id="L547">        panel_ticketLayout.setVerticalGroup(</span>
+<span class="nc" id="L548">            panel_ticketLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L549">            .addGroup(panel_ticketLayout.createSequentialGroup()</span>
+<span class="nc" id="L550">                .addContainerGap()</span>
+<span class="nc" id="L551">                .addComponent(lbl_title)</span>
+<span class="nc" id="L552">                .addGap(36, 36, 36)</span>
+<span class="nc" id="L553">                .addGroup(panel_ticketLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L554">                    .addGroup(panel_ticketLayout.createSequentialGroup()</span>
+<span class="nc" id="L555">                        .addGroup(panel_ticketLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L556">                            .addComponent(lbl_movie)</span>
+<span class="nc" id="L557">                            .addComponent(comb_movie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L558">                        .addGap(28, 28, 28)</span>
+<span class="nc" id="L559">                        .addGroup(panel_ticketLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L560">                            .addComponent(lbl_quantity)</span>
+<span class="nc" id="L561">                            .addComponent(tf_quantity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L562">                        .addGap(35, 35, 35)</span>
+<span class="nc" id="L563">                        .addComponent(lbl_time))</span>
+<span class="nc" id="L564">                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_ticketLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L565">                        .addComponent(rb_time1)</span>
+<span class="nc" id="L566">                        .addComponent(rb_time2)</span>
+<span class="nc" id="L567">                        .addComponent(rb_time3)))</span>
+<span class="nc" id="L568">                .addGap(32, 32, 32)</span>
+<span class="nc" id="L569">                .addGroup(panel_ticketLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L570">                    .addComponent(lbl_seat)</span>
+<span class="nc" id="L571">                    .addGroup(panel_ticketLayout.createSequentialGroup()</span>
+<span class="nc" id="L572">                        .addGroup(panel_ticketLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L573">                            .addComponent(cb_seatA1)</span>
+<span class="nc" id="L574">                            .addComponent(cb_seatA2)</span>
+<span class="nc" id="L575">                            .addComponent(cb_seatA3)</span>
+<span class="nc" id="L576">                            .addComponent(cb_seatA4)</span>
+<span class="nc" id="L577">                            .addComponent(cb_seatA5))</span>
+<span class="nc" id="L578">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="nc" id="L579">                        .addGroup(panel_ticketLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L580">                            .addComponent(cb_seatB1)</span>
+<span class="nc" id="L581">                            .addComponent(cb_seatB2)</span>
+<span class="nc" id="L582">                            .addComponent(cb_seatB3)</span>
+<span class="nc" id="L583">                            .addComponent(cb_seatB4)</span>
+<span class="nc" id="L584">                            .addComponent(cb_seatB5))</span>
+<span class="nc" id="L585">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="nc" id="L586">                        .addGroup(panel_ticketLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L587">                            .addComponent(cb_seatC1)</span>
+<span class="nc" id="L588">                            .addComponent(cb_seatC2)</span>
+<span class="nc" id="L589">                            .addComponent(cb_seatC3)</span>
+<span class="nc" id="L590">                            .addComponent(cb_seatC4)</span>
+<span class="nc" id="L591">                            .addComponent(cb_seatC5))))</span>
+<span class="nc" id="L592">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="nc" id="L593">                .addGroup(panel_ticketLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L594">                    .addComponent(btn_reset)</span>
+<span class="nc" id="L595">                    .addComponent(btn_goback))</span>
+<span class="nc" id="L596">                .addGap(24, 24, 24))</span>
+<span class="nc" id="L597">            .addComponent(panel_od, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+        );
+
+<span class="nc" id="L600">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());</span>
+<span class="nc" id="L601">        getContentPane().setLayout(layout);</span>
+<span class="nc" id="L602">        layout.setHorizontalGroup(</span>
+<span class="nc" id="L603">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L604">            .addGroup(layout.createSequentialGroup()</span>
+<span class="nc" id="L605">                .addComponent(panel_ticket, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L606">                .addGap(0, 0, Short.MAX_VALUE))</span>
+        );
+<span class="nc" id="L608">        layout.setVerticalGroup(</span>
+<span class="nc" id="L609">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L610">            .addGroup(layout.createSequentialGroup()</span>
+<span class="nc" id="L611">                .addComponent(panel_ticket, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L612">                .addGap(0, 0, Short.MAX_VALUE))</span>
+        );
+
+<span class="nc" id="L615">        pack();</span>
+<span class="nc" id="L616">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
+
+    private void btn_ptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ptActionPerformed
+<span class="nc bnc" id="L619" title="All 2 branches missed.">        if(cb_seatA1.isSelected())</span>
+        {
+<span class="nc" id="L621">            list.add(&quot;A1&quot;);</span>
+<span class="nc" id="L622">            seat +=&quot;A1 &quot;;</span>
+            
+        }
+<span class="nc bnc" id="L625" title="All 2 branches missed.">        if(cb_seatA2.isSelected())</span>
+        {
+<span class="nc" id="L627">            list.add(&quot;A2&quot;);</span>
+<span class="nc" id="L628">            seat +=&quot;A2 &quot;;</span>
+        }
+<span class="nc bnc" id="L630" title="All 2 branches missed.">        if(cb_seatA3.isSelected())</span>
+        {
+<span class="nc" id="L632">            list.add(&quot;A3&quot;);</span>
+<span class="nc" id="L633">            seat +=&quot;A3 &quot;;</span>
+            
+        }
+<span class="nc bnc" id="L636" title="All 2 branches missed.">        if(cb_seatA4.isSelected())</span>
+        {
+<span class="nc" id="L638">            list.add(&quot;A4&quot;);</span>
+<span class="nc" id="L639">            seat +=&quot;A4 &quot;;</span>
+        }
+<span class="nc bnc" id="L641" title="All 2 branches missed.">        if(cb_seatA5.isSelected())</span>
+        {
+<span class="nc" id="L643">            list.add(&quot;A5&quot;);</span>
+<span class="nc" id="L644">            seat +=&quot;A5 &quot;;</span>
+            
+        }
+<span class="nc bnc" id="L647" title="All 2 branches missed.">        if(cb_seatB1.isSelected())</span>
+        {
+<span class="nc" id="L649">            list.add(&quot;B1&quot;);</span>
+<span class="nc" id="L650">            seat +=&quot;B1 &quot;;</span>
+        }
+<span class="nc bnc" id="L652" title="All 2 branches missed.">        if(cb_seatB2.isSelected())</span>
+        {
+<span class="nc" id="L654">            list.add(&quot;B2&quot;);</span>
+<span class="nc" id="L655">            seat +=&quot;B2 &quot;;</span>
+            
+        }
+<span class="nc bnc" id="L658" title="All 2 branches missed.">        if(cb_seatB3.isSelected())</span>
+        {
+<span class="nc" id="L660">            list.add(&quot;B3&quot;);</span>
+<span class="nc" id="L661">            seat +=&quot;B3 &quot;;</span>
+        }
+<span class="nc bnc" id="L663" title="All 2 branches missed.">        if(cb_seatB4.isSelected())</span>
+        {
+<span class="nc" id="L665">            list.add(&quot;B4&quot;);</span>
+<span class="nc" id="L666">            seat +=&quot;B4 &quot;;</span>
+            
+        }
+<span class="nc bnc" id="L669" title="All 2 branches missed.">        if(cb_seatB5.isSelected())</span>
+        {
+<span class="nc" id="L671">            list.add(&quot;B5&quot;);</span>
+<span class="nc" id="L672">            seat +=&quot;B5 &quot;;</span>
+        }
+<span class="nc bnc" id="L674" title="All 2 branches missed.">        if(cb_seatC1.isSelected())</span>
+        {
+<span class="nc" id="L676">            list.add(&quot;C1&quot;);</span>
+<span class="nc" id="L677">            seat +=&quot;C1 &quot;;</span>
+        }
+<span class="nc bnc" id="L679" title="All 2 branches missed.">        if(cb_seatC2.isSelected())</span>
+        {
+<span class="nc" id="L681">            list.add(&quot;C2&quot;);</span>
+<span class="nc" id="L682">            seat +=&quot;C2 &quot;;</span>
+            
+        }
+<span class="nc bnc" id="L685" title="All 2 branches missed.">        if(cb_seatC3.isSelected())</span>
+        {
+<span class="nc" id="L687">            list.add(&quot;C3&quot;);</span>
+<span class="nc" id="L688">            seat +=&quot;C3 &quot;;</span>
+        }
+<span class="nc bnc" id="L690" title="All 2 branches missed.">        if(cb_seatC4.isSelected())</span>
+        {
+<span class="nc" id="L692">            list.add(&quot;C4&quot;);</span>
+<span class="nc" id="L693">            seat +=&quot;C4 &quot;;</span>
+            
+        }
+<span class="nc bnc" id="L696" title="All 2 branches missed.">        if(cb_seatC5.isSelected())</span>
+        {
+<span class="nc" id="L698">            list.add(&quot;C5&quot;);</span>
+<span class="nc" id="L699">            seat +=&quot;C5 &quot;;</span>
+        }
+        
+       
+<span class="nc" id="L703">        tf_odseat.setText(seat);</span>
+<span class="nc" id="L704">        obj_sgd.setSeat(seat);</span>
+        
+<span class="nc" id="L706">        nextbtn(list);</span>
+<span class="nc" id="L707">    }//GEN-LAST:event_btn_ptActionPerformed</span>
+
+    private void btn_resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_resetActionPerformed
+<span class="nc" id="L710">        resetbtn();</span>
+<span class="nc" id="L711">    }//GEN-LAST:event_btn_resetActionPerformed</span>
+
+    private void comb_movieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comb_movieActionPerformed
+<span class="nc bnc" id="L714" title="All 2 branches missed.">        if(comb_movie.getSelectedIndex() == 1)</span>
+        {
+<span class="nc" id="L716">            movie = &quot;Harry Potter and the Half Blood Prince&quot;;</span>
+<span class="nc" id="L717">            tf_odmovie.setText(movie);</span>
+<span class="nc" id="L718">            theaterno = 1;</span>
+<span class="nc" id="L719">            theater = Double.toString(theaterno);</span>
+<span class="nc" id="L720">            obj_sgd.setMovie(movie);</span>
+<span class="nc" id="L721">            obj_sgd.setTheater(theater);</span>
+        }
+<span class="nc bnc" id="L723" title="All 2 branches missed.">        else if(comb_movie.getSelectedIndex() == 2)</span>
+        {
+<span class="nc" id="L725">            movie = &quot;Avengers : End Game&quot;;</span>
+<span class="nc" id="L726">            tf_odmovie.setText(movie);</span>
+<span class="nc" id="L727">            theaterno = 2;</span>
+<span class="nc" id="L728">            theater = Double.toString(theaterno);</span>
+<span class="nc" id="L729">            obj_sgd.setMovie(movie);</span>
+<span class="nc" id="L730">            obj_sgd.setTheater(theater);</span>
+        }
+        else
+        {
+<span class="nc" id="L734">            movie = &quot;&quot;;</span>
+<span class="nc" id="L735">            tf_odmovie.setText(movie);</span>
+<span class="nc" id="L736">            theaterno = 0;</span>
+<span class="nc" id="L737">            theater = Double.toString(theaterno);</span>
+<span class="nc" id="L738">            obj_sgd.setMovie(movie);</span>
+<span class="nc" id="L739">            obj_sgd.setTheater(theater);</span>
+        }
+<span class="nc" id="L741">    }//GEN-LAST:event_comb_movieActionPerformed</span>
+
+    private void tf_odmovieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_odmovieActionPerformed
+
+<span class="nc" id="L745">    }//GEN-LAST:event_tf_odmovieActionPerformed</span>
+
+    private void tf_quantityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_quantityActionPerformed
+
+<span class="nc" id="L749">    }//GEN-LAST:event_tf_quantityActionPerformed</span>
+
+    private void tf_odquantityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_odquantityActionPerformed
+        
+<span class="nc" id="L753">    }//GEN-LAST:event_tf_odquantityActionPerformed</span>
+
+    private void tf_odtimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_odtimeActionPerformed
+        
+<span class="nc" id="L757">    }//GEN-LAST:event_tf_odtimeActionPerformed</span>
+
+    private void tf_odseatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_odseatActionPerformed
+
+<span class="nc" id="L761">    }//GEN-LAST:event_tf_odseatActionPerformed</span>
+
+    private void tf_odtpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_odtpActionPerformed
+        
+<span class="nc" id="L765">    }//GEN-LAST:event_tf_odtpActionPerformed</span>
+
+    private void rb_time1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb_time1ActionPerformed
+<span class="nc bnc" id="L768" title="All 2 branches missed.">        if(rb_time1.isSelected())</span>
+        {
+<span class="nc" id="L770">            time = rb_time1.getText();</span>
+<span class="nc" id="L771">            tf_odtime.setText(time);</span>
+<span class="nc" id="L772">            obj_sgd.setTime(time);</span>
+        }
+        else
+        {
+<span class="nc" id="L776">            time = &quot;&quot;;</span>
+<span class="nc" id="L777">            tf_odtime.setText(time);</span>
+<span class="nc" id="L778">            obj_sgd.setTime(time);</span>
+        }        
+<span class="nc" id="L780">    }//GEN-LAST:event_rb_time1ActionPerformed</span>
+
+    private void rb_time2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb_time2ActionPerformed
+<span class="nc bnc" id="L783" title="All 2 branches missed.">        if (rb_time2.isSelected()) </span>
+        {
+<span class="nc" id="L785">            time = rb_time2.getText();</span>
+<span class="nc" id="L786">            tf_odtime.setText(time);</span>
+<span class="nc" id="L787">            obj_sgd.setTime(time);</span>
+        }
+        else
+        {
+<span class="nc" id="L791">            time = &quot;&quot;;</span>
+<span class="nc" id="L792">            tf_odtime.setText(time);</span>
+<span class="nc" id="L793">            obj_sgd.setTime(time);</span>
+        }
+<span class="nc" id="L795">    }//GEN-LAST:event_rb_time2ActionPerformed</span>
+
+    private void rb_time3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb_time3ActionPerformed
+<span class="nc bnc" id="L798" title="All 2 branches missed.">        if (rb_time3.isSelected())</span>
+        {
+<span class="nc" id="L800">            time = rb_time3.getText();</span>
+<span class="nc" id="L801">            tf_odtime.setText(time);</span>
+<span class="nc" id="L802">            obj_sgd.setTime(time);</span>
+        }
+        else
+        {
+<span class="nc" id="L806">            time = &quot;&quot;;</span>
+<span class="nc" id="L807">            tf_odtime.setText(time);</span>
+<span class="nc" id="L808">            obj_sgd.setTime(time);</span>
+        }
+<span class="nc" id="L810">    }//GEN-LAST:event_rb_time3ActionPerformed</span>
+
+    private void cb_seatA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_seatA1ActionPerformed
+
+<span class="nc" id="L814">    }//GEN-LAST:event_cb_seatA1ActionPerformed</span>
+        
+    private void cb_seatA2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_seatA2ActionPerformed
+
+<span class="nc" id="L818">    }//GEN-LAST:event_cb_seatA2ActionPerformed</span>
+
+    private void cb_seatA3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_seatA3ActionPerformed
+
+<span class="nc" id="L822">    }//GEN-LAST:event_cb_seatA3ActionPerformed</span>
+
+    private void cb_seatA4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_seatA4ActionPerformed
+
+<span class="nc" id="L826">    }//GEN-LAST:event_cb_seatA4ActionPerformed</span>
+
+    private void cb_seatA5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_seatA5ActionPerformed
+
+<span class="nc" id="L830">    }//GEN-LAST:event_cb_seatA5ActionPerformed</span>
+
+    private void cb_seatB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_seatB1ActionPerformed
+
+<span class="nc" id="L834">    }//GEN-LAST:event_cb_seatB1ActionPerformed</span>
+
+    private void cb_seatB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_seatB2ActionPerformed
+
+<span class="nc" id="L838">    }//GEN-LAST:event_cb_seatB2ActionPerformed</span>
+
+    private void cb_seatB3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_seatB3ActionPerformed
+
+<span class="nc" id="L842">    }//GEN-LAST:event_cb_seatB3ActionPerformed</span>
+
+    private void cb_seatB4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_seatB4ActionPerformed
+
+<span class="nc" id="L846">    }//GEN-LAST:event_cb_seatB4ActionPerformed</span>
+
+    private void cb_seatB5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_seatB5ActionPerformed
+
+<span class="nc" id="L850">    }//GEN-LAST:event_cb_seatB5ActionPerformed</span>
+
+    private void cb_seatC1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_seatC1ActionPerformed
+
+<span class="nc" id="L854">    }//GEN-LAST:event_cb_seatC1ActionPerformed</span>
+
+    private void cb_seatC2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_seatC2ActionPerformed
+
+<span class="nc" id="L858">    }//GEN-LAST:event_cb_seatC2ActionPerformed</span>
+
+    private void cb_seatC3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_seatC3ActionPerformed
+
+<span class="nc" id="L862">    }//GEN-LAST:event_cb_seatC3ActionPerformed</span>
+
+    private void cb_seatC4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_seatC4ActionPerformed
+
+<span class="nc" id="L866">    }//GEN-LAST:event_cb_seatC4ActionPerformed</span>
+
+    private void cb_seatC5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_seatC5ActionPerformed
+
+<span class="nc" id="L870">    }//GEN-LAST:event_cb_seatC5ActionPerformed</span>
+
+    private void tf_quantityKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tf_quantityKeyReleased
+        
+         try 
+        {
+<span class="nc" id="L876">            quantity = Integer.parseInt(tf_quantity.getText());</span>
+        
+<span class="nc" id="L878">        } catch (Exception e) </span>
+        {
+<span class="nc" id="L880">            JOptionPane.showMessageDialog(this, &quot;please input a valid number for the quantity&quot;);</span>
+<span class="nc" id="L881">        }</span>
+<span class="nc" id="L882">        qty = Double.toString(quantity);</span>
+<span class="nc" id="L883">        totalprice = quantity*price;</span>
+<span class="nc" id="L884">        tp = Double.toString(totalprice);</span>
+<span class="nc" id="L885">        tf_odtp.setText(tp);</span>
+<span class="nc" id="L886">        tf_odquantity.setText(qty);</span>
+<span class="nc" id="L887">        obj_sgd.setQty(qty);</span>
+<span class="nc" id="L888">    }//GEN-LAST:event_tf_quantityKeyReleased</span>
+
+    private void btn_gobackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_gobackActionPerformed
+<span class="nc" id="L891">        goback();</span>
+<span class="nc" id="L892">    }//GEN-LAST:event_btn_gobackActionPerformed</span>
+
+    private void tf_odcashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_odcashActionPerformed
+        // TODO add your handling code here:
+<span class="nc" id="L896">    }//GEN-LAST:event_tf_odcashActionPerformed</span>
+
+    private void tf_odcmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_odcmActionPerformed
+        // TODO add your handling code here:
+<span class="nc" id="L900">    }//GEN-LAST:event_tf_odcmActionPerformed</span>
+
+    private void tf_odcashKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tf_odcashKeyReleased
+        try 
+        {
+<span class="nc" id="L905">            cash = Double.valueOf(tf_odcash.getText());</span>
+<span class="nc" id="L906">        } catch (Exception e) </span>
+        {
+<span class="nc" id="L908">            JOptionPane.showMessageDialog(this, &quot;please input a valid nominal of money for the cash&quot;);</span>
+<span class="nc" id="L909">        }</span>
+<span class="nc" id="L910">        change = cash-totalprice;</span>
+<span class="nc" id="L911">        cm = Double.toString(change);</span>
+<span class="nc" id="L912">        tf_odcm.setText(cm);</span>
+<span class="nc" id="L913">    }//GEN-LAST:event_tf_odcashKeyReleased</span>
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_goback;
+    private javax.swing.JButton btn_pt;
+    private javax.swing.JButton btn_reset;
+    private javax.swing.ButtonGroup btngr_time;
+    private javax.swing.JCheckBox cb_seatA1;
+    private javax.swing.JCheckBox cb_seatA2;
+    private javax.swing.JCheckBox cb_seatA3;
+    private javax.swing.JCheckBox cb_seatA4;
+    private javax.swing.JCheckBox cb_seatA5;
+    private javax.swing.JCheckBox cb_seatB1;
+    private javax.swing.JCheckBox cb_seatB2;
+    private javax.swing.JCheckBox cb_seatB3;
+    private javax.swing.JCheckBox cb_seatB4;
+    private javax.swing.JCheckBox cb_seatB5;
+    private javax.swing.JCheckBox cb_seatC1;
+    private javax.swing.JCheckBox cb_seatC2;
+    private javax.swing.JCheckBox cb_seatC3;
+    private javax.swing.JCheckBox cb_seatC4;
+    private javax.swing.JCheckBox cb_seatC5;
+    private javax.swing.JComboBox&lt;String&gt; comb_movie;
+    private javax.swing.JLabel lbl_movie;
+    private javax.swing.JLabel lbl_od;
+    private javax.swing.JLabel lbl_odcash;
+    private javax.swing.JLabel lbl_odcm;
+    private javax.swing.JLabel lbl_odmovie;
+    private javax.swing.JLabel lbl_odquantity;
+    private javax.swing.JLabel lbl_odseat;
+    private javax.swing.JLabel lbl_odtime;
+    private javax.swing.JLabel lbl_odtp;
+    private javax.swing.JLabel lbl_quantity;
+    private javax.swing.JLabel lbl_seat;
+    private javax.swing.JLabel lbl_time;
+    private javax.swing.JLabel lbl_title;
+    private javax.swing.JPanel panel_od;
+    private javax.swing.JPanel panel_ticket;
+    private javax.swing.JRadioButton rb_time1;
+    private javax.swing.JRadioButton rb_time2;
+    private javax.swing.JRadioButton rb_time3;
+    private javax.swing.JTextField tf_odcash;
+    private javax.swing.JTextField tf_odcm;
+    private javax.swing.JTextField tf_odmovie;
+    private javax.swing.JTextField tf_odquantity;
+    private javax.swing.JTextField tf_odseat;
+    private javax.swing.JTextField tf_odtime;
+    private javax.swing.JTextField tf_odtp;
+    private javax.swing.JTextField tf_quantity;
+    // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void goback() 
+    {
+<span class="nc" id="L967">        mainMenuForm obj_mame = new mainMenuForm();</span>
+<span class="nc" id="L968">        obj_mame.setVisible(true);</span>
+<span class="nc" id="L969">        this.setVisible(false);</span>
+<span class="nc" id="L970">    }</span>
+
+    @Override
+    public void resetbtn() 
+    {
+<span class="nc" id="L975">        tf_odmovie.setText(&quot;&quot;);</span>
+<span class="nc" id="L976">        tf_odquantity.setText(&quot;&quot;);</span>
+<span class="nc" id="L977">        tf_odseat.setText(&quot;&quot;);</span>
+<span class="nc" id="L978">        tf_odtime.setText(&quot;&quot;);</span>
+<span class="nc" id="L979">        tf_odtp.setText(&quot;&quot;);</span>
+<span class="nc" id="L980">        comb_movie.setSelectedItem(null);</span>
+<span class="nc" id="L981">        tf_quantity.setText(&quot;&quot;);</span>
+<span class="nc" id="L982">        tf_odcash.setText(&quot;&quot;);</span>
+<span class="nc" id="L983">        tf_odcm.setText(&quot;&quot;);</span>
+<span class="nc" id="L984">        btngr_time.clearSelection();</span>
+<span class="nc" id="L985">        cb_seatA1.setSelected(false);</span>
+<span class="nc" id="L986">        cb_seatA2.setSelected(false);</span>
+<span class="nc" id="L987">        cb_seatA3.setSelected(false);</span>
+<span class="nc" id="L988">        cb_seatA4.setSelected(false);</span>
+<span class="nc" id="L989">        cb_seatA5.setSelected(false);</span>
+<span class="nc" id="L990">        cb_seatB1.setSelected(false);</span>
+<span class="nc" id="L991">        cb_seatB2.setSelected(false);</span>
+<span class="nc" id="L992">        cb_seatB3.setSelected(false);</span>
+<span class="nc" id="L993">        cb_seatB4.setSelected(false);</span>
+<span class="nc" id="L994">        cb_seatB5.setSelected(false);</span>
+<span class="nc" id="L995">        cb_seatC1.setSelected(false);</span>
+<span class="nc" id="L996">        cb_seatC2.setSelected(false);</span>
+<span class="nc" id="L997">        cb_seatC3.setSelected(false);</span>
+<span class="nc" id="L998">        cb_seatC4.setSelected(false);</span>
+<span class="nc" id="L999">        cb_seatC5.setSelected(false);</span>
+<span class="nc" id="L1000">        seat = &quot;&quot;;</span>
+<span class="nc" id="L1001">        time = &quot;&quot;;</span>
+<span class="nc" id="L1002">        movie = &quot;&quot;;</span>
+<span class="nc" id="L1003">        quantity = 0;</span>
+<span class="nc" id="L1004">        totalprice = 0;</span>
+<span class="nc" id="L1005">        theaterno = 0;</span>
+<span class="nc" id="L1006">        change = 0;</span>
+<span class="nc" id="L1007">        cash = 0;</span>
+<span class="nc" id="L1008">    }</span>
+
+    @Override
+    public void nextbtn(List ls) 
+    {
+<span class="nc" id="L1013">        int choose = JOptionPane.showOptionDialog(this, &quot;Print the ticket?&quot;, &quot;Print ticket.&quot;, JOptionPane.YES_OPTION, JOptionPane.NO_OPTION, null, null, null);</span>
+<span class="nc bnc" id="L1014" title="All 3 branches missed.">        switch(choose)</span>
+        {
+            case JOptionPane.YES_OPTION:
+<span class="nc" id="L1017">                confirmationForm obj_cf = new confirmationForm();</span>
+<span class="nc" id="L1018">                obj_cf.setVisible(true);</span>
+<span class="nc" id="L1019">                obj_cf.data(ls);</span>
+<span class="nc" id="L1020">                this.setVisible(false);</span>
+<span class="nc" id="L1021">                JOptionPane.showMessageDialog(this, &quot;Ticket has been printed!&quot;, &quot;Ticket printed.&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
+<span class="nc" id="L1022">                break;</span>
+            case JOptionPane.NO_OPTION:
+<span class="nc" id="L1024">                resetbtn();</span>
+                break;
+        }
+<span class="nc" id="L1027">    }</span>
+
+    public void check(List ls) 
+    {
+        try 
+        {
+<span class="nc bnc" id="L1033" title="All 2 branches missed.">            if(&quot;A1&quot;.equals(ls.get(0))){</span>
+<span class="nc" id="L1034">                cb_seatA1.setEnabled(false);</span>
+            }
+<span class="nc bnc" id="L1036" title="All 2 branches missed.">            if(&quot;A2&quot;.equals(ls.get(1))){</span>
+<span class="nc" id="L1037">                cb_seatA2.setEnabled(false);</span>
+            }
+<span class="nc bnc" id="L1039" title="All 2 branches missed.">            if(&quot;A3&quot;.equals(ls.get(2))){</span>
+<span class="nc" id="L1040">                cb_seatA3.setEnabled(false);</span>
+            }
+<span class="nc bnc" id="L1042" title="All 2 branches missed.">            if(&quot;A4&quot;.equals(ls.get(3))){</span>
+<span class="nc" id="L1043">                cb_seatA4.setEnabled(false);</span>
+            }
+<span class="nc bnc" id="L1045" title="All 2 branches missed.">            if(&quot;A5&quot;.equals(ls.get(4))){</span>
+<span class="nc" id="L1046">                cb_seatA5.setEnabled(false);</span>
+            }
+<span class="nc bnc" id="L1048" title="All 2 branches missed.">            if(&quot;B1&quot;.equals(ls.get(5))){</span>
+<span class="nc" id="L1049">                cb_seatB1.setEnabled(false);</span>
+            }
+<span class="nc bnc" id="L1051" title="All 2 branches missed.">            if(&quot;B2&quot;.equals(ls.get(6))){</span>
+<span class="nc" id="L1052">                cb_seatB2.setEnabled(false);</span>
+            }
+<span class="nc bnc" id="L1054" title="All 2 branches missed.">            if(&quot;B3&quot;.equals(ls.get(7))){</span>
+<span class="nc" id="L1055">                cb_seatB3.setEnabled(false);</span>
+            }
+<span class="nc bnc" id="L1057" title="All 2 branches missed.">            if(&quot;B4&quot;.equals(ls.get(8))){</span>
+<span class="nc" id="L1058">                cb_seatB4.setEnabled(false);</span>
+            }
+<span class="nc bnc" id="L1060" title="All 2 branches missed.">            if(&quot;B5&quot;.equals(ls.get(9))){</span>
+<span class="nc" id="L1061">                cb_seatB5.setEnabled(false);</span>
+            }
+<span class="nc bnc" id="L1063" title="All 2 branches missed.">            if(&quot;C1&quot;.equals(ls.get(10))){</span>
+<span class="nc" id="L1064">                cb_seatC1.setEnabled(false);</span>
+            }
+<span class="nc bnc" id="L1066" title="All 2 branches missed.">            if(&quot;C2&quot;.equals(ls.get(11))){</span>
+<span class="nc" id="L1067">                cb_seatC2.setEnabled(false);</span>
+            }
+<span class="nc bnc" id="L1069" title="All 2 branches missed.">            if(&quot;C3&quot;.equals(ls.get(12))){</span>
+<span class="nc" id="L1070">                cb_seatC3.setEnabled(false);</span>
+            }
+<span class="nc bnc" id="L1072" title="All 2 branches missed.">            if(&quot;C4&quot;.equals(ls.get(13))){</span>
+<span class="nc" id="L1073">                cb_seatC4.setEnabled(false);</span>
+            }
+<span class="nc bnc" id="L1075" title="All 2 branches missed.">            if(&quot;C5&quot;.equals(ls.get(14))){</span>
+<span class="nc" id="L1076">                cb_seatC5.setEnabled(false);</span>
+            }
+        } 
+<span class="nc" id="L1079">        catch (Exception e) </span>
+        {
+<span class="nc" id="L1081">            System.out.println(&quot;oops! somethings not right&quot;);</span>
+<span class="nc" id="L1082">        }</span>
+            
+<span class="nc" id="L1084">    }</span>
+
+    @Override
+    public void nextbtn() 
+    {
+<span class="nc" id="L1089">        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;); </span>
+    }
+
+    @Override
+    public void goback(List ls) 
+    {
+<span class="nc" id="L1095">        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);</span>
+    }
+    
+ public int hitung(int a, int b, int c){
+<span class="nc" id="L1099">        return a*b-c;</span>
+    }
+
+    public void kembalian()
+    {
+        double kembalian;
+        try 
+        {
+<span class="nc" id="L1107">            quantity = Integer.parseInt(tf_quantity.getText());</span>
+        
+<span class="nc" id="L1109">        } catch (Exception e) </span>
+        {
+<span class="nc" id="L1111">            JOptionPane.showMessageDialog(this, &quot;please input a valid number for the quantity&quot;);</span>
+<span class="nc" id="L1112">        }</span>
+<span class="nc" id="L1113">        qty = Double.toString(quantity);</span>
+<span class="nc" id="L1114">        totalprice = quantity*price;</span>
+<span class="nc" id="L1115">        tp = Double.toString(totalprice);</span>
+<span class="nc" id="L1116">        tf_odtp.setText(tp);</span>
+<span class="nc" id="L1117">        tf_odquantity.setText(qty);</span>
+<span class="nc" id="L1118">        obj_sgd.setQty(qty);</span>
+<span class="nc" id="L1119">        kembalian = change;</span>
+<span class="nc" id="L1120">    }</span>
+}
+
+
+    
+
+
+    
+    
+
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

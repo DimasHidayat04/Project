@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>confirmationForm.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;leCinema&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">Project1</a> &gt; <span class="el_source">confirmationForm.java</span></div><h1>confirmationForm.java</h1><pre class="source lang-java linenums">package Project1;
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDate;
+import java.util.List;
+<span class="nc" id="L5">public class confirmationForm extends javax.swing.JFrame implements gbBTN</span>
+{
+<span class="nc" id="L7">    static setgetData obj_sgd = new setgetData();</span>
+<span class="nc" id="L8">    String  movie = obj_sgd.getMovie(), qty = obj_sgd.getQty(), time = obj_sgd.getTime(), seat = obj_sgd.getSeat(), theater = obj_sgd.getTheater();</span>
+    static List lss;
+    public void data(List ls)
+    {
+<span class="nc" id="L12">        lss=ls;</span>
+<span class="nc" id="L13">        ticketingForm tf = new ticketingForm();</span>
+<span class="nc" id="L14">        tf.check(ls);</span>
+<span class="nc" id="L15">    }</span>
+    
+    public void confirmationForm() 
+    {
+<span class="nc" id="L19">        initComponents();</span>
+<span class="nc" id="L20">        setLocationRelativeTo(this);</span>
+<span class="nc" id="L21">        tf_movie1.setText(movie);</span>
+<span class="nc" id="L22">        tf_movie2.setText(movie);</span>
+<span class="nc" id="L23">        tf_quantity1.setText(qty);</span>
+<span class="nc" id="L24">        tf_quantity2.setText(qty);</span>
+<span class="nc" id="L25">        tf_seat1.setText(seat);</span>
+<span class="nc" id="L26">        tf_seat2.setText(seat);</span>
+<span class="nc" id="L27">        tf_theater1.setText(theater);</span>
+<span class="nc" id="L28">        tf_theater2.setText(theater);</span>
+<span class="nc" id="L29">        tf_time1.setText(time);</span>
+<span class="nc" id="L30">        tf_time2.setText(time);</span>
+<span class="nc" id="L31">        LocalDate ld = LocalDate.now();</span>
+<span class="nc" id="L32">        tf_date1.setText(DateTimeFormatter.ofPattern(&quot;dd/MM/yyyy&quot;).format(ld));</span>
+<span class="nc" id="L33">        tf_date2.setText(DateTimeFormatter.ofPattern(&quot;dd/MM/yyyy&quot;).format(ld));</span>
+    
+<span class="nc" id="L35">    }    </span>
+        
+    @SuppressWarnings(&quot;unchecked&quot;)
+    // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+<span class="nc" id="L41">        panel_confirm = new javax.swing.JPanel();</span>
+<span class="nc" id="L42">        lbl_title = new javax.swing.JLabel();</span>
+<span class="nc" id="L43">        lbl_movie1 = new javax.swing.JLabel();</span>
+<span class="nc" id="L44">        lbl_quantity1 = new javax.swing.JLabel();</span>
+<span class="nc" id="L45">        lbl_time1 = new javax.swing.JLabel();</span>
+<span class="nc" id="L46">        lbl_seat1 = new javax.swing.JLabel();</span>
+<span class="nc" id="L47">        tf_movie1 = new javax.swing.JTextField();</span>
+<span class="nc" id="L48">        tf_quantity1 = new javax.swing.JTextField();</span>
+<span class="nc" id="L49">        tf_time1 = new javax.swing.JTextField();</span>
+<span class="nc" id="L50">        tf_seat1 = new javax.swing.JTextField();</span>
+<span class="nc" id="L51">        jPanel1 = new javax.swing.JPanel();</span>
+<span class="nc" id="L52">        lbl_theater2 = new javax.swing.JLabel();</span>
+<span class="nc" id="L53">        tf_theater2 = new javax.swing.JTextField();</span>
+<span class="nc" id="L54">        lbl_date1 = new javax.swing.JLabel();</span>
+<span class="nc" id="L55">        tf_date1 = new javax.swing.JTextField();</span>
+<span class="nc" id="L56">        lbl_quantity2 = new javax.swing.JLabel();</span>
+<span class="nc" id="L57">        tf_quantity2 = new javax.swing.JTextField();</span>
+<span class="nc" id="L58">        lbl_movie2 = new javax.swing.JLabel();</span>
+<span class="nc" id="L59">        tf_movie2 = new javax.swing.JTextField();</span>
+<span class="nc" id="L60">        lbl_theater1 = new javax.swing.JLabel();</span>
+<span class="nc" id="L61">        tf_theater1 = new javax.swing.JTextField();</span>
+<span class="nc" id="L62">        lbl_time2 = new javax.swing.JLabel();</span>
+<span class="nc" id="L63">        tf_time2 = new javax.swing.JTextField();</span>
+<span class="nc" id="L64">        lbl_seat2 = new javax.swing.JLabel();</span>
+<span class="nc" id="L65">        tf_seat2 = new javax.swing.JTextField();</span>
+<span class="nc" id="L66">        lbl_date2 = new javax.swing.JLabel();</span>
+<span class="nc" id="L67">        tf_date2 = new javax.swing.JTextField();</span>
+<span class="nc" id="L68">        jPanel3 = new javax.swing.JPanel();</span>
+<span class="nc" id="L69">        btn_goback = new javax.swing.JButton();</span>
+
+<span class="nc" id="L71">        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);</span>
+
+<span class="nc" id="L73">        panel_confirm.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L74">        panel_confirm.setBorder(javax.swing.BorderFactory.createMatteBorder(8, 8, 8, 8, new java.awt.Color(0, 0, 0)));</span>
+
+<span class="nc" id="L76">        lbl_title.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 48)); // NOI18N</span>
+<span class="nc" id="L77">        lbl_title.setText(&quot;Ticket&quot;);</span>
+
+<span class="nc" id="L79">        lbl_movie1.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L80">        lbl_movie1.setText(&quot;Movie             :&quot;);</span>
+
+<span class="nc" id="L82">        lbl_quantity1.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L83">        lbl_quantity1.setText(&quot;Quantity         :&quot;);</span>
+
+<span class="nc" id="L85">        lbl_time1.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L86">        lbl_time1.setText(&quot;Time              :&quot;);</span>
+
+<span class="nc" id="L88">        lbl_seat1.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L89">        lbl_seat1.setText(&quot;Seat               :&quot;);</span>
+
+<span class="nc" id="L91">        tf_movie1.setEditable(false);</span>
+<span class="nc" id="L92">        tf_movie1.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L93">        tf_movie1.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L94">        tf_movie1.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L96">                tf_movie1ActionPerformed(evt);</span>
+<span class="nc" id="L97">            }</span>
+        });
+<span class="nc" id="L99">        tf_movie1.addKeyListener(new java.awt.event.KeyAdapter() {</span>
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+<span class="nc" id="L101">                tf_movie1KeyReleased(evt);</span>
+<span class="nc" id="L102">            }</span>
+        });
+
+<span class="nc" id="L105">        tf_quantity1.setEditable(false);</span>
+<span class="nc" id="L106">        tf_quantity1.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L107">        tf_quantity1.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+
+<span class="nc" id="L109">        tf_time1.setEditable(false);</span>
+<span class="nc" id="L110">        tf_time1.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L111">        tf_time1.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+
+<span class="nc" id="L113">        tf_seat1.setEditable(false);</span>
+<span class="nc" id="L114">        tf_seat1.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L115">        tf_seat1.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+
+<span class="nc" id="L117">        jPanel1.setBackground(new java.awt.Color(0, 0, 0));</span>
+
+<span class="nc" id="L119">        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);</span>
+<span class="nc" id="L120">        jPanel1.setLayout(jPanel1Layout);</span>
+<span class="nc" id="L121">        jPanel1Layout.setHorizontalGroup(</span>
+<span class="nc" id="L122">            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L123">            .addGap(0, 8, Short.MAX_VALUE)</span>
+        );
+<span class="nc" id="L125">        jPanel1Layout.setVerticalGroup(</span>
+<span class="nc" id="L126">            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L127">            .addGap(0, 0, Short.MAX_VALUE)</span>
+        );
+
+<span class="nc" id="L130">        lbl_theater2.setFont(new java.awt.Font(&quot;Tw Cen MT&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L131">        lbl_theater2.setText(&quot;Theater:&quot;);</span>
+
+<span class="nc" id="L133">        tf_theater2.setEditable(false);</span>
+<span class="nc" id="L134">        tf_theater2.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L135">        tf_theater2.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 96)); // NOI18N</span>
+<span class="nc" id="L136">        tf_theater2.setHorizontalAlignment(javax.swing.JTextField.CENTER);</span>
+
+<span class="nc" id="L138">        lbl_date1.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L139">        lbl_date1.setText(&quot;Date              :&quot;);</span>
+
+<span class="nc" id="L141">        tf_date1.setEditable(false);</span>
+<span class="nc" id="L142">        tf_date1.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L143">        tf_date1.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L144">        tf_date1.addKeyListener(new java.awt.event.KeyAdapter() {</span>
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+<span class="nc" id="L146">                tf_date1KeyReleased(evt);</span>
+<span class="nc" id="L147">            }</span>
+        });
+
+<span class="nc" id="L150">        lbl_quantity2.setFont(new java.awt.Font(&quot;Tw Cen MT&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L151">        lbl_quantity2.setText(&quot;Quantity:&quot;);</span>
+
+<span class="nc" id="L153">        tf_quantity2.setEditable(false);</span>
+<span class="nc" id="L154">        tf_quantity2.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L155">        tf_quantity2.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L156">        tf_quantity2.setHorizontalAlignment(javax.swing.JTextField.CENTER);</span>
+
+<span class="nc" id="L158">        lbl_movie2.setFont(new java.awt.Font(&quot;Tw Cen MT&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L159">        lbl_movie2.setText(&quot;Movie:&quot;);</span>
+
+<span class="nc" id="L161">        tf_movie2.setEditable(false);</span>
+<span class="nc" id="L162">        tf_movie2.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L163">        tf_movie2.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L164">        tf_movie2.setHorizontalAlignment(javax.swing.JTextField.CENTER);</span>
+<span class="nc" id="L165">        tf_movie2.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L167">                tf_movie2ActionPerformed(evt);</span>
+<span class="nc" id="L168">            }</span>
+        });
+
+<span class="nc" id="L171">        lbl_theater1.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L172">        lbl_theater1.setText(&quot;Theater          :&quot;);</span>
+
+<span class="nc" id="L174">        tf_theater1.setEditable(false);</span>
+<span class="nc" id="L175">        tf_theater1.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L176">        tf_theater1.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L177">        tf_theater1.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L179">                tf_theater1ActionPerformed(evt);</span>
+<span class="nc" id="L180">            }</span>
+        });
+<span class="nc" id="L182">        tf_theater1.addKeyListener(new java.awt.event.KeyAdapter() {</span>
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+<span class="nc" id="L184">                tf_theater1KeyReleased(evt);</span>
+<span class="nc" id="L185">            }</span>
+        });
+
+<span class="nc" id="L188">        lbl_time2.setFont(new java.awt.Font(&quot;Tw Cen MT&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L189">        lbl_time2.setText(&quot;Time      :&quot;);</span>
+
+<span class="nc" id="L191">        tf_time2.setEditable(false);</span>
+<span class="nc" id="L192">        tf_time2.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L193">        tf_time2.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L194">        tf_time2.setHorizontalAlignment(javax.swing.JTextField.CENTER);</span>
+
+<span class="nc" id="L196">        lbl_seat2.setFont(new java.awt.Font(&quot;Tw Cen MT&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L197">        lbl_seat2.setText(&quot;Seat      :&quot;);</span>
+
+<span class="nc" id="L199">        tf_seat2.setEditable(false);</span>
+<span class="nc" id="L200">        tf_seat2.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L201">        tf_seat2.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+
+<span class="nc" id="L203">        lbl_date2.setFont(new java.awt.Font(&quot;Tw Cen MT&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L204">        lbl_date2.setText(&quot;Date      :&quot;);</span>
+
+<span class="nc" id="L206">        tf_date2.setEditable(false);</span>
+<span class="nc" id="L207">        tf_date2.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L208">        tf_date2.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L209">        tf_date2.addKeyListener(new java.awt.event.KeyAdapter() {</span>
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+<span class="nc" id="L211">                tf_date2KeyReleased(evt);</span>
+<span class="nc" id="L212">            }</span>
+        });
+
+<span class="nc" id="L215">        jPanel3.setBackground(new java.awt.Color(0, 0, 0));</span>
+
+<span class="nc" id="L217">        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);</span>
+<span class="nc" id="L218">        jPanel3.setLayout(jPanel3Layout);</span>
+<span class="nc" id="L219">        jPanel3Layout.setHorizontalGroup(</span>
+<span class="nc" id="L220">            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L221">            .addGap(0, 0, Short.MAX_VALUE)</span>
+        );
+<span class="nc" id="L223">        jPanel3Layout.setVerticalGroup(</span>
+<span class="nc" id="L224">            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L225">            .addGap(0, 8, Short.MAX_VALUE)</span>
+        );
+
+<span class="nc" id="L228">        btn_goback.setBackground(new java.awt.Color(0, 0, 0));</span>
+<span class="nc" id="L229">        btn_goback.setFont(new java.awt.Font(&quot;Sylfaen&quot;, 1, 18)); // NOI18N</span>
+<span class="nc" id="L230">        btn_goback.setForeground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L231">        btn_goback.setText(&quot;Go to Ticketing Form&quot;);</span>
+<span class="nc" id="L232">        btn_goback.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L234">                btn_gobackActionPerformed(evt);</span>
+<span class="nc" id="L235">            }</span>
+        });
+
+<span class="nc" id="L238">        javax.swing.GroupLayout panel_confirmLayout = new javax.swing.GroupLayout(panel_confirm);</span>
+<span class="nc" id="L239">        panel_confirm.setLayout(panel_confirmLayout);</span>
+<span class="nc" id="L240">        panel_confirmLayout.setHorizontalGroup(</span>
+<span class="nc" id="L241">            panel_confirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L242">            .addGroup(panel_confirmLayout.createSequentialGroup()</span>
+<span class="nc" id="L243">                .addGap(34, 34, 34)</span>
+<span class="nc" id="L244">                .addGroup(panel_confirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L245">                    .addComponent(lbl_title)</span>
+<span class="nc" id="L246">                    .addGroup(panel_confirmLayout.createSequentialGroup()</span>
+<span class="nc" id="L247">                        .addGroup(panel_confirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)</span>
+<span class="nc" id="L248">                            .addComponent(lbl_seat1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="nc" id="L249">                            .addComponent(lbl_quantity1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="nc" id="L250">                            .addComponent(lbl_time1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="nc" id="L251">                            .addComponent(lbl_date1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L252">                        .addGap(37, 37, 37)</span>
+<span class="nc" id="L253">                        .addGroup(panel_confirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)</span>
+<span class="nc" id="L254">                            .addGroup(panel_confirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L255">                                .addGroup(panel_confirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)</span>
+<span class="nc" id="L256">                                    .addComponent(tf_quantity1)</span>
+<span class="nc" id="L257">                                    .addComponent(tf_time1, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L258">                                .addComponent(tf_seat1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L259">                            .addComponent(tf_date1, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)))</span>
+<span class="nc" id="L260">                    .addGroup(panel_confirmLayout.createSequentialGroup()</span>
+<span class="nc" id="L261">                        .addGroup(panel_confirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L262">                            .addComponent(lbl_theater1)</span>
+<span class="nc" id="L263">                            .addComponent(lbl_movie1))</span>
+<span class="nc" id="L264">                        .addGap(35, 35, 35)</span>
+<span class="nc" id="L265">                        .addGroup(panel_confirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L266">                            .addComponent(tf_theater1, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L267">                            .addComponent(tf_movie1, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE))))</span>
+<span class="nc" id="L268">                .addGap(35, 35, 35)</span>
+<span class="nc" id="L269">                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L270">                .addGap(18, 18, 18)</span>
+<span class="nc" id="L271">                .addGroup(panel_confirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L272">                    .addGroup(panel_confirmLayout.createSequentialGroup()</span>
+<span class="nc" id="L273">                        .addGroup(panel_confirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L274">                            .addComponent(lbl_movie2, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L275">                            .addComponent(lbl_theater2)</span>
+<span class="nc" id="L276">                            .addComponent(tf_movie2, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L277">                        .addGap(0, 0, Short.MAX_VALUE))</span>
+<span class="nc" id="L278">                    .addGroup(panel_confirmLayout.createSequentialGroup()</span>
+<span class="nc" id="L279">                        .addGroup(panel_confirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)</span>
+<span class="nc" id="L280">                            .addGroup(panel_confirmLayout.createSequentialGroup()</span>
+<span class="nc" id="L281">                                .addComponent(tf_theater2, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L282">                                .addGap(18, 18, 18)</span>
+<span class="nc" id="L283">                                .addGroup(panel_confirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)</span>
+<span class="nc" id="L284">                                    .addComponent(lbl_quantity2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="nc" id="L285">                                    .addComponent(lbl_time2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L286">                                .addGap(29, 29, 29)</span>
+<span class="nc" id="L287">                                .addGroup(panel_confirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)</span>
+<span class="nc" id="L288">                                    .addComponent(tf_quantity2)</span>
+<span class="nc" id="L289">                                    .addComponent(tf_time2, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))</span>
+<span class="nc" id="L290">                            .addComponent(lbl_seat2)</span>
+<span class="nc" id="L291">                            .addComponent(tf_seat2)</span>
+<span class="nc" id="L292">                            .addComponent(lbl_date2)</span>
+<span class="nc" id="L293">                            .addComponent(tf_date2))</span>
+<span class="nc" id="L294">                        .addContainerGap(38, Short.MAX_VALUE))))</span>
+<span class="nc" id="L295">            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="nc" id="L296">            .addGroup(panel_confirmLayout.createSequentialGroup()</span>
+<span class="nc" id="L297">                .addGap(20, 20, 20)</span>
+<span class="nc" id="L298">                .addComponent(btn_goback)</span>
+<span class="nc" id="L299">                .addGap(0, 0, Short.MAX_VALUE))</span>
+        );
+<span class="nc" id="L301">        panel_confirmLayout.setVerticalGroup(</span>
+<span class="nc" id="L302">            panel_confirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L303">            .addGroup(panel_confirmLayout.createSequentialGroup()</span>
+<span class="nc" id="L304">                .addGroup(panel_confirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L305">                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="nc" id="L306">                    .addGroup(panel_confirmLayout.createSequentialGroup()</span>
+<span class="nc" id="L307">                        .addGroup(panel_confirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L308">                            .addGroup(panel_confirmLayout.createSequentialGroup()</span>
+<span class="nc" id="L309">                                .addContainerGap()</span>
+<span class="nc" id="L310">                                .addComponent(lbl_movie2)</span>
+<span class="nc" id="L311">                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
+<span class="nc" id="L312">                                .addComponent(tf_movie2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L313">                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="nc" id="L314">                                .addComponent(lbl_theater2)</span>
+<span class="nc" id="L315">                                .addGroup(panel_confirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L316">                                    .addGroup(panel_confirmLayout.createSequentialGroup()</span>
+<span class="nc" id="L317">                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
+<span class="nc" id="L318">                                        .addComponent(tf_theater2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L319">                                    .addGroup(panel_confirmLayout.createSequentialGroup()</span>
+<span class="nc" id="L320">                                        .addGap(36, 36, 36)</span>
+<span class="nc" id="L321">                                        .addGroup(panel_confirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)</span>
+<span class="nc" id="L322">                                            .addGroup(panel_confirmLayout.createSequentialGroup()</span>
+<span class="nc" id="L323">                                                .addComponent(lbl_quantity2)</span>
+<span class="nc" id="L324">                                                .addGap(18, 18, 18)</span>
+<span class="nc" id="L325">                                                .addGroup(panel_confirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L326">                                                    .addComponent(lbl_time2)</span>
+<span class="nc" id="L327">                                                    .addComponent(tf_time2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))</span>
+<span class="nc" id="L328">                                            .addGroup(panel_confirmLayout.createSequentialGroup()</span>
+<span class="nc" id="L329">                                                .addComponent(tf_quantity2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L330">                                                .addGap(42, 42, 42)))))</span>
+<span class="nc" id="L331">                                .addGap(18, 18, 18)</span>
+<span class="nc" id="L332">                                .addComponent(lbl_seat2)</span>
+<span class="nc" id="L333">                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
+<span class="nc" id="L334">                                .addComponent(tf_seat2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L335">                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
+<span class="nc" id="L336">                                .addComponent(lbl_date2)</span>
+<span class="nc" id="L337">                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="nc" id="L338">                                .addComponent(tf_date2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L339">                            .addGroup(panel_confirmLayout.createSequentialGroup()</span>
+<span class="nc" id="L340">                                .addGap(25, 25, 25)</span>
+<span class="nc" id="L341">                                .addComponent(lbl_title)</span>
+<span class="nc" id="L342">                                .addGap(18, 18, 18)</span>
+<span class="nc" id="L343">                                .addGroup(panel_confirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L344">                                    .addComponent(lbl_movie1)</span>
+<span class="nc" id="L345">                                    .addComponent(tf_movie1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L346">                                .addGap(18, 18, 18)</span>
+<span class="nc" id="L347">                                .addGroup(panel_confirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L348">                                    .addComponent(lbl_theater1)</span>
+<span class="nc" id="L349">                                    .addComponent(tf_theater1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L350">                                .addGap(18, 18, 18)</span>
+<span class="nc" id="L351">                                .addGroup(panel_confirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L352">                                    .addComponent(lbl_quantity1)</span>
+<span class="nc" id="L353">                                    .addComponent(tf_quantity1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L354">                                .addGap(18, 18, 18)</span>
+<span class="nc" id="L355">                                .addGroup(panel_confirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L356">                                    .addComponent(lbl_time1)</span>
+<span class="nc" id="L357">                                    .addComponent(tf_time1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L358">                                .addGap(18, 18, 18)</span>
+<span class="nc" id="L359">                                .addGroup(panel_confirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L360">                                    .addComponent(lbl_seat1)</span>
+<span class="nc" id="L361">                                    .addComponent(tf_seat1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L362">                                .addGap(18, 18, 18)</span>
+<span class="nc" id="L363">                                .addGroup(panel_confirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L364">                                    .addComponent(lbl_date1)</span>
+<span class="nc" id="L365">                                    .addComponent(tf_date1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))</span>
+<span class="nc" id="L366">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)))</span>
+<span class="nc" id="L367">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
+<span class="nc" id="L368">                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L369">                .addGap(18, 18, 18)</span>
+<span class="nc" id="L370">                .addComponent(btn_goback)</span>
+<span class="nc" id="L371">                .addGap(18, 18, 18))</span>
+        );
+
+<span class="nc" id="L374">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());</span>
+<span class="nc" id="L375">        getContentPane().setLayout(layout);</span>
+<span class="nc" id="L376">        layout.setHorizontalGroup(</span>
+<span class="nc" id="L377">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L378">            .addGroup(layout.createSequentialGroup()</span>
+<span class="nc" id="L379">                .addComponent(panel_confirm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L380">                .addGap(0, 0, Short.MAX_VALUE))</span>
+        );
+<span class="nc" id="L382">        layout.setVerticalGroup(</span>
+<span class="nc" id="L383">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L384">            .addGroup(layout.createSequentialGroup()</span>
+<span class="nc" id="L385">                .addComponent(panel_confirm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L386">                .addGap(0, 0, Short.MAX_VALUE))</span>
+        );
+
+<span class="nc" id="L389">        pack();</span>
+<span class="nc" id="L390">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
+
+    private void tf_movie1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_movie1ActionPerformed
+
+<span class="nc" id="L394">    }//GEN-LAST:event_tf_movie1ActionPerformed</span>
+
+    private void tf_movie1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tf_movie1KeyReleased
+
+<span class="nc" id="L398">    }//GEN-LAST:event_tf_movie1KeyReleased</span>
+
+    private void tf_date1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tf_date1KeyReleased
+        
+<span class="nc" id="L402">    }//GEN-LAST:event_tf_date1KeyReleased</span>
+
+    private void tf_movie2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_movie2ActionPerformed
+
+<span class="nc" id="L406">    }//GEN-LAST:event_tf_movie2ActionPerformed</span>
+
+    private void tf_theater1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_theater1ActionPerformed
+ 
+<span class="nc" id="L410">    }//GEN-LAST:event_tf_theater1ActionPerformed</span>
+
+    private void tf_theater1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tf_theater1KeyReleased
+
+<span class="nc" id="L414">    }//GEN-LAST:event_tf_theater1KeyReleased</span>
+
+    private void tf_date2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tf_date2KeyReleased
+
+<span class="nc" id="L418">    }//GEN-LAST:event_tf_date2KeyReleased</span>
+
+    private void btn_gobackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_gobackActionPerformed
+<span class="nc" id="L421">        goback(lss);</span>
+<span class="nc" id="L422">    }//GEN-LAST:event_btn_gobackActionPerformed</span>
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_goback;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel lbl_date1;
+    private javax.swing.JLabel lbl_date2;
+    private javax.swing.JLabel lbl_movie1;
+    private javax.swing.JLabel lbl_movie2;
+    private javax.swing.JLabel lbl_quantity1;
+    private javax.swing.JLabel lbl_quantity2;
+    private javax.swing.JLabel lbl_seat1;
+    private javax.swing.JLabel lbl_seat2;
+    private javax.swing.JLabel lbl_theater1;
+    private javax.swing.JLabel lbl_theater2;
+    private javax.swing.JLabel lbl_time1;
+    private javax.swing.JLabel lbl_time2;
+    private javax.swing.JLabel lbl_title;
+    private javax.swing.JPanel panel_confirm;
+    private javax.swing.JTextField tf_date1;
+    private javax.swing.JTextField tf_date2;
+    private javax.swing.JTextField tf_movie1;
+    private javax.swing.JTextField tf_movie2;
+    private javax.swing.JTextField tf_quantity1;
+    private javax.swing.JTextField tf_quantity2;
+    private javax.swing.JTextField tf_seat1;
+    private javax.swing.JTextField tf_seat2;
+    private javax.swing.JTextField tf_theater1;
+    private javax.swing.JTextField tf_theater2;
+    private javax.swing.JTextField tf_time1;
+    private javax.swing.JTextField tf_time2;
+    // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void goback() 
+    {
+<span class="nc" id="L459">        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);</span>
+    }
+
+    @Override
+    public void goback(List ls) 
+    {
+<span class="nc" id="L465">        ticketingForm obj = new ticketingForm();</span>
+<span class="nc" id="L466">        obj.setVisible(true);</span>
+<span class="nc" id="L467">        obj.check(ls);</span>
+<span class="nc" id="L468">        this.setVisible(false);</span>
+<span class="nc" id="L469">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>
